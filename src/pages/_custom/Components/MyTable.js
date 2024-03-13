@@ -9,7 +9,6 @@ const MyTable = ({ title, api }) => {
     api.getAll().then(res => {
       setData(res.data)
       setEmptyModel(res.emptyModel)
-      console.log(res.data)
     })
   }, [])
 
@@ -27,17 +26,21 @@ const MyTable = ({ title, api }) => {
           <div className="table-responsive">
             <Table className="align-middle mb-0">
               <thead>
-                <tr>
-                  <th>#</th>
-                </tr>
+              {!!emptyModel && 
+                <tr> 
+                  {Object.keys(emptyModel).map((item1, index1) => {
+                    return <th key={index1}>{item1}</th>
+                  })}
+                </tr> 
+              }
               </thead>
               <tbody>
                 {!!data &&
-                  data.map((x, xi) => {
+                  data.map((item1, index1) => {
                     return (
-                      <tr key={xi}>
-                        {Object.values(x).map((y, yi) => {
-                          return <td key={yi}>{y}</td>
+                      <tr key={index1}>
+                        {Object.values(item1).map((item2, index2) => {
+                          return <td key={index2}>{item2? item2.toString() : '-'}</td>
                         })}
                         {/* <td>
                               <button type="button" className="btn btn-light btn-sm">

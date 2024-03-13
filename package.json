@@ -93,6 +93,7 @@
     "slick-carousel": "^1.8.1",
     "swiper": "^11.0.5",
     "toastr": "^2.1.4",
+    "yarn": "^1.22.22",
     "yup": "^1.2.0"
   },
   "scripts": {

@@ -174,10 +174,12 @@ import ContactsProfile from "../pages/Contacts/ContactsProfile/contacts-profile"
 //custom
 import Hotel from "pages/_custom/Hotel"
 import CountryTable from "pages/_custom/Pages/CountryTable"
+import RegionTable from "pages/_custom/Pages/RegionTable"
 
 const authProtectedRoutes = [
   { path: "/hotel", component: <Hotel /> },
   { path: "/countries", component: <CountryTable /> },
+  { path: "/regions", component: <RegionTable /> },
 
   { path: "/dashboard", component: <Dashboard /> },
   { path: "/dashboard-saas", component: <DashboardSaas /> },
