@@ -58,7 +58,7 @@ export function useApi(controller) {
 
   async function remove(id) {
     try {
-      const response = await axiosBase.delete(`${controller}/delete/${id}`)
+      const response = await axiosBase.post(`${controller}/delete/${id}`)
       return response.data
     } catch (err) {
       throw err

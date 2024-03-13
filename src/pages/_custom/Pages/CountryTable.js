@@ -8,7 +8,7 @@ const CountryTable = () => {
   return (
     <React.Fragment>
       <div className="page-content">
-        <MyTable title={"Country Table"} api={api} />
+        <MyTable title={"Country"} api={api} actions={["Edit", "Delete"]} />
       </div>
     </React.Fragment>
   )
