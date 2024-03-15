@@ -8,6 +8,12 @@ export const ModalProvider = ({ children }) => {
   const [modalType, setModalType] = useState("")
   const [modalTitle, setModalTitle] = useState("Modal")
   const [modalApi, setModalApi] = useState(null)
+  const [modalEmptyModel, setModalEmptyModel] = useState(null)
+  const [refresh, setRefresh] = useState(false)
+
+  const toggleRefresh = () => {
+    setRefresh(!refresh)
+  }
 
   const openModal = ({ data, api }) => {
     setModalApi(api)
@@ -31,10 +37,14 @@ export const ModalProvider = ({ children }) => {
         closeModal,
         modalApi,
         setModalData,
+        toggleRefresh,
+        modalEmptyModel,
 
         openModal,
         setModalType,
         setModalTitle,
+        refresh,
+        setModalEmptyModel,
       }}
     >
       {children}

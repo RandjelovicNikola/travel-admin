@@ -18,7 +18,6 @@ export function setAxiosToken(token) {
 
 export function useApi(controller) {
   async function getAll(data) {
-    console.log(axiosBase.defaults)
     try {
       var query = ObjectToQuery(data)
 
@@ -40,7 +39,7 @@ export function useApi(controller) {
 
   async function create(data) {
     try {
-      const response = await axiosBase.post(`${controller}/create`, data)
+      const response = await axiosBase.post(`${controller}`, data)
       return response.data
     } catch (err) {
       throw err
@@ -49,7 +48,7 @@ export function useApi(controller) {
 
   async function update(id, data) {
     try {
-      const response = await axiosBase.post(`${controller}/update`, data)
+      const response = await axiosBase.put(`${controller}`, data)
       return response.data
     } catch (err) {
       throw err
@@ -58,7 +57,7 @@ export function useApi(controller) {
 
   async function remove(id) {
     try {
-      const response = await axiosBase.post(`${controller}/delete/${id}`)
+      const response = await axiosBase.delete(`${controller}/${id}`)
       return response.data
     } catch (err) {
       throw err

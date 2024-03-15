@@ -7,31 +7,31 @@ import { ModalContext } from "util/providers/ModalProvider"
 const MyTable = ({ title, api, actions }) => {
   const [data, setData] = useState()
   const [emptyModel, setEmptyModel] = useState()
-  const [editModalOpen, setEditModalOpen] = useState(false)
 
-  const { openModal, setModalType } = useContext(ModalContext)
+  const { openModal, setModalType, refresh, setModalEmptyModel } =
+    useContext(ModalContext)
 
   const handleDelete = id => {
     api.remove(id).then(res => {
       if (res)
         api.getAll().then(res => {
-          setData(res.data)
+          setData(res.list)
         })
     })
   }
 
   const handleEdit = item => {
+    setModalEmptyModel(emptyModel)
     setModalType("edit")
     openModal({ data: item, api })
   }
 
   useEffect(() => {
     api.getAll().then(res => {
-      setData(res.data)
+      setData(res.list)
       setEmptyModel(res.emptyModel)
-      console.log(res)
     })
-  }, [])
+  }, [refresh])
 
   return (
     <Card>
@@ -59,7 +59,7 @@ const MyTable = ({ title, api, actions }) => {
                         {Object.values(item1).map((item2, index2) => {
                           return (
                             <td key={index2}>
-                              {item2 ? item2.toString() : "-"}
+                              {item2 != null ? item2.toString() : "-"}
                             </td>
                           )
                         })}
@@ -69,9 +69,17 @@ const MyTable = ({ title, api, actions }) => {
                           >
                             {actions.map((action, index1) => {
                               return (
-                                <>
+                                <div
+                                  key={index1}
+                                  style={{
+                                    display: "flex",
+                                    flexDirection: "row",
+                                  }}
+                                >
+                                  {index1 != 0 && (
+                                    <Separator ver={false} gap={5} />
+                                  )}
                                   <button
-                                    key={index1}
                                     type="button"
                                     className="btn btn-light btn-sm"
                                     onClick={
@@ -86,10 +94,7 @@ const MyTable = ({ title, api, actions }) => {
                                   >
                                     {action}
                                   </button>
-                                  {actions.length > index1 + 1 && (
-                                    <Separator ver={false} gap={5} />
-                                  )}
-                                </>
+                                </div>
                               )
                             })}
                           </div>
