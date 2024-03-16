@@ -173,13 +173,55 @@ import ContactsProfile from "../pages/Contacts/ContactsProfile/contacts-profile"
 
 //custom
 import Hotel from "pages/_custom/Hotel"
+import BlogCommentTable from "pages/_custom/Pages/BlogCommentTable"
+import BlogPostTable from "pages/_custom/Pages/BlogPostTable"
+import CancelTermTable from "pages/_custom/Pages/CancelTermTable"
+import CityTable from "pages/_custom/Pages/CityTable"
 import CountryTable from "pages/_custom/Pages/CountryTable"
+import FAQTable from "pages/_custom/Pages/FAQTable"
+import HotelTable from "pages/_custom/Pages/HotelTable"
+import HotelFeatureTable from "pages/_custom/Pages/HotelFeatureTable"
+import HotelFeatureCategoryTable from "pages/_custom/Pages/HotelFeatureCategoryTable"
+import ImageTable from "pages/_custom/Pages/ImageTable"
+import PermissionTable from "pages/_custom/Pages/PermissionTable"
+import PricingTable from "pages/_custom/Pages/PricingTable"
 import RegionTable from "pages/_custom/Pages/RegionTable"
+import RecensionTable from "pages/_custom/Pages/RecensionTable"
+import ReservationTable from "pages/_custom/Pages/ReservationTable"
+import ReservationTemplateTable from "pages/_custom/Pages/ReservationTemplateTable"
+import RoleTable from "pages/_custom/Pages/RoleTable"
+import RoomTable from "pages/_custom/Pages/RoomTable"
+import RoomFeatureTable from "pages/_custom/Pages/RoomFeatureTable"
+import RoomFeatureCategoryTable from "pages/_custom/Pages/RoomFeatureCategoryTable"
+import RoomTemplateTable from "pages/_custom/Pages/RoomTemplateTable"
+import SubRegionTable from "pages/_custom/Pages/SubRegionTable"
+import UserTable from "pages/_custom/Pages/UserTable"
 
 const authProtectedRoutes = [
   { path: "/hotel", component: <Hotel /> },
+  { path: "/blogcomments", component: <BlogCommentTable /> },
+  { path: "/blogposts", component: <BlogPostTable /> },
+  { path: "/cancelterms", component: <CancelTermTable /> },
+  { path: "/cities", component: <CityTable /> },
   { path: "/countries", component: <CountryTable /> },
+  { path: "/faqs", component: <FAQTable /> },
+  { path: "/hotels", component: <HotelTable /> },
+  { path: "/hotelfeatures", component: <HotelFeatureTable /> },
+  { path: "/hotelfeaturecategories", component: <HotelFeatureCategoryTable /> },
+  { path: "/images", component: <ImageTable /> },
+  { path: "/permissions", component: <PermissionTable /> },
+  { path: "/pricings", component: <PricingTable /> },
   { path: "/regions", component: <RegionTable /> },
+  { path: "/recensions", component: <RecensionTable /> },
+  { path: "/reservations", component: <ReservationTable /> },
+  { path: "/reservationtemplates", component: <ReservationTemplateTable /> },
+  { path: "/roles", component: <RoleTable /> },
+  { path: "/rooms", component: <RoomTable /> },
+  { path: "/roomfeatures", component: <RoomFeatureTable /> },
+  { path: "/roomfeaturecategories", component: <RoomFeatureCategoryTable /> },
+  { path: "/roomtemplates", component: <RoomTemplateTable /> },
+  { path: "/subregions", component: <SubRegionTable /> },
+  { path: "/users", component: <UserTable /> },
 
   { path: "/dashboard", component: <Dashboard /> },
   { path: "/dashboard-saas", component: <DashboardSaas /> },
