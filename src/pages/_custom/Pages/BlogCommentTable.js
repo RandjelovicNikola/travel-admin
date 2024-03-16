@@ -8,7 +8,7 @@ const BlogCommentTable = () => {
   return (
     <React.Fragment>
       <div className="page-content">
-        <MyTable title={"BlogComment"} api={api} />
+        <MyTable title={"BlogComment"} api={api} actions={["Edit", "Delete"]} />
       </div>
     </React.Fragment>
   )
