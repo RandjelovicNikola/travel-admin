@@ -1,5 +1,5 @@
 import React from "react"
-import MyTable from "../Components/MyTable"
+import MyTable from "../Components/MyTable/MyTable"
 import useRoomTemplateApi from "util/api/aRoomTemplate"
 
 const RoomTemplateTable = () => {
@@ -8,7 +8,11 @@ const RoomTemplateTable = () => {
   return (
     <React.Fragment>
       <div className="page-content">
-        <MyTable title={"RoomTemplate"} api={api} actions={["Edit", "Delete"]} />
+        <MyTable
+          title={"RoomTemplate"}
+          api={api}
+          actions={["Edit", "Delete"]}
+        />
       </div>
     </React.Fragment>
   )

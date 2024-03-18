@@ -1,5 +1,5 @@
 import React from "react"
-import MyTable from "../Components/MyTable"
+import MyTable from "../Components/MyTable/MyTable"
 import useHotelApi from "util/api/aHotel"
 
 const HotelTable = () => {

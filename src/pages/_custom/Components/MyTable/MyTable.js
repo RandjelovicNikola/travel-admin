@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react"
 import { Card, CardBody, Col, Table } from "reactstrap"
-import Separator from "../Common/Separator"
-import MyModal from "./MyModal"
+import MySeparator from "../../Common/MySeparator"
 import { ModalContext } from "util/providers/ModalProvider"
 
 const MyTable = ({ title, api, actions }) => {
@@ -11,19 +10,33 @@ const MyTable = ({ title, api, actions }) => {
   const { openModal, setModalType, refresh, setModalEmptyModel } =
     useContext(ModalContext)
 
-  const handleDelete = id => {
-    api.remove(id).then(res => {
-      if (res)
-        api.getAll().then(res => {
-          setData(res.list)
-        })
+  const handleRefresh = () => {
+    api.getAll().then(res => {
+      setData(res.list)
     })
+  }
+
+  const handleAdd = () => {
+    setModalEmptyModel(emptyModel)
+    setModalType("add")
+
+    var addData = {}
+    Object.keys(emptyModel).map((x, i) => {
+      addData[x] = null
+    })
+
+    openModal({ data: addData, api })
   }
 
   const handleEdit = item => {
     setModalEmptyModel(emptyModel)
     setModalType("edit")
     openModal({ data: item, api })
+  }
+
+  const handleDelete = id => {
+    setModalType("delete")
+    openModal({ data: id, api })
   }
 
   useEffect(() => {
@@ -37,7 +50,38 @@ const MyTable = ({ title, api, actions }) => {
     <Card>
       <CardBody>
         <div className="table-responsive">
-          <h4 className="card-title">{title}</h4>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+            }}
+          >
+            <h4 className="card-title">{title}</h4>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                padding: "5px 5px 0 0",
+              }}
+            >
+              <button
+                onClick={handleAdd}
+                type="button"
+                className="btn btn-primary btn-sm"
+              >
+                Add
+              </button>
+              <MySeparator ver={false} />
+              <button
+                onClick={handleRefresh}
+                type="button"
+                className="btn btn-primary btn-sm"
+              >
+                Refresh
+              </button>
+            </div>
+          </div>
 
           <div className="table-responsive">
             <Table className="align-middle mb-0">
@@ -45,7 +89,11 @@ const MyTable = ({ title, api, actions }) => {
                 {!!emptyModel && (
                   <tr>
                     {Object.keys(emptyModel).map((item1, index1) => {
-                      return <th key={index1}>{item1}</th>
+                      return (
+                        <th key={index1}>
+                          {item1[0].toUpperCase() + item1.slice(1)}
+                        </th>
+                      )
                     })}
                     <th>Operations</th>
                   </tr>
@@ -77,7 +125,7 @@ const MyTable = ({ title, api, actions }) => {
                                   }}
                                 >
                                   {index1 != 0 && (
-                                    <Separator ver={false} gap={5} />
+                                    <MySeparator ver={false} gap={5} />
                                   )}
                                   <button
                                     type="button"

@@ -1,5 +1,5 @@
 import React from "react"
-import MyTable from "../Components/MyTable"
+import MyTable from "../Components/MyTable/MyTable"
 import useBlogCommentApi from "util/api/aBlogComment"
 
 const BlogCommentTable = () => {

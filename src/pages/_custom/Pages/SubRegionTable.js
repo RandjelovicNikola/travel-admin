@@ -1,5 +1,5 @@
 import React from "react"
-import MyTable from "../Components/MyTable"
+import MyTable from "../Components/MyTable/MyTable"
 import useSubRegionApi from "util/api/aSubRegion"
 
 const SubRegionTable = () => {

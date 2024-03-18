@@ -4,7 +4,7 @@ export const ModalContext = createContext()
 
 export const ModalProvider = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [modalData, setModalData] = useState(null)
+  const [modalData, setModalData] = useState({})
   const [modalType, setModalType] = useState("")
   const [modalTitle, setModalTitle] = useState("Modal")
   const [modalApi, setModalApi] = useState(null)

@@ -3,9 +3,9 @@ import useCountryApi from "util/api/aCountry"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import Separator from "./Common/Separator"
 import { Card, CardBody, CardImg, CardText, CardTitle } from "reactstrap"
 import { Link } from "react-router-dom"
+import MySeparator from "./Common/MySeparator"
 
 const Hotel = id => {
   const [hotel, setHotel] = useState()
@@ -45,7 +45,7 @@ const Hotel = id => {
             <button className="btn btn-primary btn-md">Add</button>
           </div>
 
-          <Separator />
+          <MySeparator />
 
           <div style={{ width: "auto" }}>
             <Slider {...settings}>

@@ -1,5 +1,5 @@
 import React from "react"
-import MyTable from "../Components/MyTable"
+import MyTable from "../Components/MyTable/MyTable"
 import useCancelTermApi from "util/api/aCancelTerm"
 
 const CancelTermTable = () => {

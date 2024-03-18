@@ -1,5 +1,5 @@
 import React from "react"
-import MyTable from "../Components/MyTable"
+import MyTable from "../Components/MyTable/MyTable"
 import useRoomFeatureCategoryApi from "util/api/aRoomFeatureCategory"
 
 const RoomFeatureCategoryTable = () => {
@@ -8,7 +8,11 @@ const RoomFeatureCategoryTable = () => {
   return (
     <React.Fragment>
       <div className="page-content">
-        <MyTable title={"RoomFeatureCategory"} api={api} actions={["Edit", "Delete"]} />
+        <MyTable
+          title={"RoomFeatureCategory"}
+          api={api}
+          actions={["Edit", "Delete"]}
+        />
       </div>
     </React.Fragment>
   )
