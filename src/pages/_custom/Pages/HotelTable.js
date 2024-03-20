@@ -8,7 +8,11 @@ const HotelTable = () => {
   return (
     <React.Fragment>
       <div className="page-content">
-        <MyTable title={"Hotel"} api={api} actions={["Edit", "Delete"]} />
+        <MyTable
+          title={"Hotel"}
+          api={api}
+          actions={["Info", "Edit", "Delete"]}
+        />
       </div>
     </React.Fragment>
   )

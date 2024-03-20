@@ -3,8 +3,14 @@ import { ModalContext } from "util/providers/ModalProvider"
 import InputComponent from "./InputComponent"
 
 const EditModalBody = memo(() => {
-  const { modalData, closeModal, modalApi, setModalData, toggleRefresh } =
-    useContext(ModalContext)
+  const {
+    modalData,
+    closeModal,
+    modalApi,
+    setModalData,
+    toggleRefresh,
+    modalEmptyModel,
+  } = useContext(ModalContext)
 
   const handleEdit = useCallback(
     ({ id, item }) => {
@@ -30,6 +36,7 @@ const EditModalBody = memo(() => {
           <InputComponent
             key={i}
             item={x}
+            emptyModel={modalEmptyModel}
             handleInputChange={handleInputChange}
           />
         ))}

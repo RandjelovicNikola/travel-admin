@@ -3,12 +3,17 @@ import { ModalContext } from "util/providers/ModalProvider"
 import InputComponent from "./InputComponent"
 
 const AddModalBody = memo(() => {
-  const { modalData, closeModal, modalApi, setModalData, toggleRefresh } =
-    useContext(ModalContext)
+  const {
+    modalData,
+    closeModal,
+    modalApi,
+    setModalData,
+    toggleRefresh,
+    modalEmptyModel,
+  } = useContext(ModalContext)
 
   const handleAdd = useCallback(
     ({ item }) => {
-      console.log(item)
       modalApi.create(item).then(toggleRefresh).finally(closeModal)
     },
     [modalApi, closeModal, toggleRefresh]
@@ -28,6 +33,7 @@ const AddModalBody = memo(() => {
           <InputComponent
             key={i}
             item={x}
+            emptyModel={modalEmptyModel}
             handleInputChange={handleInputChange}
           />
         ))}
