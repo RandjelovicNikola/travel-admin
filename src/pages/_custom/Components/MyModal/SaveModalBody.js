@@ -1,8 +1,8 @@
 import React, { useCallback, useContext, memo } from "react"
 import { ModalContext } from "util/providers/ModalProvider"
-import InputComponent from "./InputComponent"
+import ModalInputComponent from "./ModalInputComponent"
 
-const EditModalBody = memo(() => {
+const SaveModalBody = memo(() => {
   const {
     modalData,
     closeModal,
@@ -10,14 +10,17 @@ const EditModalBody = memo(() => {
     setModalData,
     toggleRefresh,
     modalEmptyModel,
+    modalType,
   } = useContext(ModalContext)
 
-  const handleEdit = useCallback(
-    ({ id, item }) => {
-      modalApi.update(id, item).then(toggleRefresh).finally(closeModal)
-    },
-    [modalApi, closeModal, toggleRefresh]
-  )
+  const handleSave = useCallback(() => {
+    modalType == "edit"
+      ? modalApi
+          .update(modalData.id, modalData)
+          .then(toggleRefresh)
+          .finally(closeModal)
+      : modalApi.create(modalData).then(toggleRefresh).finally(closeModal)
+  }, [modalApi, closeModal, toggleRefresh])
 
   const handleInputChange = useCallback(
     ({ key, value }) => {
@@ -33,7 +36,7 @@ const EditModalBody = memo(() => {
     <div className="modal-body">
       {!!modalData &&
         Object.entries(modalData).map((x, i) => (
-          <InputComponent
+          <ModalInputComponent
             key={i}
             item={x}
             emptyModel={modalEmptyModel}
@@ -48,11 +51,7 @@ const EditModalBody = memo(() => {
         >
           Close
         </button>
-        <button
-          onClick={() => handleEdit({ id: modalData.id, item: modalData })}
-          type="button"
-          className="btn btn-primary"
-        >
+        <button onClick={handleSave} type="button" className="btn btn-primary">
           Save changes
         </button>
       </div>
@@ -60,6 +59,6 @@ const EditModalBody = memo(() => {
   )
 })
 
-EditModalBody.displayName = "EditModalBody"
+SaveModalBody.displayName = "SaveModalBody"
 
-export default EditModalBody
+export default SaveModalBody

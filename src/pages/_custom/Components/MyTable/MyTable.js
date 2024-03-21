@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { useContext, useEffect, useRef, useState } from "react"
 import { Card, CardBody, Col, Row, Table } from "reactstrap"
 import MySeparator from "../../Common/MySeparator"
 import { ModalContext } from "util/providers/ModalProvider"
 import { Link } from "react-router-dom"
 import { toCapitalized } from "util/tools/tDisplay"
-import InputComponent from "../MyModal/InputComponent"
+import ModalInputComponent from "../MyModal/ModalInputComponent"
 
 const MyTable = ({ title, api, actions }) => {
   const [data, setData] = useState()
@@ -12,6 +12,8 @@ const MyTable = ({ title, api, actions }) => {
   const [emptyModel, setEmptyModel] = useState()
   const [searchModel, setSearchModel] = useState({})
   const [isFirstFetch, setIsFirstFetch] = useState(true)
+
+  const debounceTimeout = useRef(null)
 
   const { openModal, setModalType, refresh, setModalEmptyModel } =
     useContext(ModalContext)
@@ -110,7 +112,23 @@ const MyTable = ({ title, api, actions }) => {
   }
 
   useEffect(() => {
-    handleFetch()
+    if (isFirstFetch) {
+      handleFetch()
+    } else {
+      if (debounceTimeout.current) {
+        clearTimeout(debounceTimeout.current)
+      }
+
+      debounceTimeout.current = setTimeout(() => {
+        handleFetch()
+      }, 500)
+
+      return () => {
+        if (debounceTimeout.current) {
+          clearTimeout(debounceTimeout.current)
+        }
+      }
+    }
   }, [refresh, searchModel])
 
   return (
@@ -159,7 +177,7 @@ const MyTable = ({ title, api, actions }) => {
               }}
             >
               {Object.entries(searchModel).map((x, i) => (
-                <InputComponent
+                <ModalInputComponent
                   key={i}
                   item={x}
                   emptyModel={emptyModel}
@@ -184,7 +202,11 @@ const MyTable = ({ title, api, actions }) => {
                             searchModel.sortBy?.toLowerCase() ==
                               item1.toLowerCase() && searchModel.sortOrder == 0
                               ? "sorting_asc"
-                              : "sorting_desc"
+                              : searchModel.sortBy?.toLowerCase() ==
+                                  item1.toLowerCase() &&
+                                searchModel.sortOrder == 1
+                              ? "sorting_desc"
+                              : ""
                           }`}
                         >
                           {toCapitalized(item1)}
