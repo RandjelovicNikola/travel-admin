@@ -172,30 +172,29 @@ import ContactsList from "../pages/Contacts/ContactList/contacts-list"
 import ContactsProfile from "../pages/Contacts/ContactsProfile/contacts-profile"
 
 //custom
-import Hotel from "pages/_custom/Hotel"
-import BlogCommentTable from "pages/_custom/Pages/BlogCommentTable"
-import BlogPostTable from "pages/_custom/Pages/BlogPostTable"
-import CancelTermTable from "pages/_custom/Pages/CancelTermTable"
-import CityTable from "pages/_custom/Pages/CityTable"
-import CountryTable from "pages/_custom/Pages/CountryTable"
-import FAQTable from "pages/_custom/Pages/FAQTable"
-import HotelTable from "pages/_custom/Pages/HotelTable"
-import HotelFeatureTable from "pages/_custom/Pages/HotelFeatureTable"
-import HotelFeatureCategoryTable from "pages/_custom/Pages/HotelFeatureCategoryTable"
-import ImageTable from "pages/_custom/Pages/ImageTable"
-import PermissionTable from "pages/_custom/Pages/PermissionTable"
-import PricingTable from "pages/_custom/Pages/PricingTable"
-import RegionTable from "pages/_custom/Pages/RegionTable"
-import RecensionTable from "pages/_custom/Pages/RecensionTable"
-import ReservationTable from "pages/_custom/Pages/ReservationTable"
-import ReservationTemplateTable from "pages/_custom/Pages/ReservationTemplateTable"
-import RoleTable from "pages/_custom/Pages/RoleTable"
-import RoomTable from "pages/_custom/Pages/RoomTable"
-import RoomFeatureTable from "pages/_custom/Pages/RoomFeatureTable"
-import RoomFeatureCategoryTable from "pages/_custom/Pages/RoomFeatureCategoryTable"
-import RoomTemplateTable from "pages/_custom/Pages/RoomTemplateTable"
-import SubRegionTable from "pages/_custom/Pages/SubRegionTable"
-import UserTable from "pages/_custom/Pages/UserTable"
+import Hotel from "pages/_custom/Pages/Details/Hotel"
+import BlogCommentTable from "pages/_custom/Pages/Tables/BlogCommentTable"
+import BlogPostTable from "pages/_custom/Pages/Tables/BlogPostTable"
+import CancelTermTable from "pages/_custom/Pages/Tables/CancelTermTable"
+import CityTable from "pages/_custom/Pages/Tables/CityTable"
+import CountryTable from "pages/_custom/Pages/Tables/CountryTable"
+import FAQTable from "pages/_custom/Pages/Tables/FAQTable"
+import HotelTable from "pages/_custom/Pages/Tables/HotelTable"
+import HotelFeatureTable from "pages/_custom/Pages/Tables/HotelFeatureTable"
+import HotelFeatureCategoryTable from "pages/_custom/Pages/Tables/HotelFeatureCategoryTable"
+import ImageTable from "pages/_custom/Pages/Tables/ImageTable"
+import PermissionTable from "pages/_custom/Pages/Tables/PermissionTable"
+import PricingTable from "pages/_custom/Pages/Tables/PricingTable"
+import RegionTable from "pages/_custom/Pages/Tables/RegionTable"
+import RecensionTable from "pages/_custom/Pages/Tables/RecensionTable"
+import ReservationTable from "pages/_custom/Pages/Tables/ReservationTable"
+import RoleTable from "pages/_custom/Pages/Tables/RoleTable"
+import RoomTable from "pages/_custom/Pages/Tables/RoomTable"
+import RoomFeatureTable from "pages/_custom/Pages/Tables/RoomFeatureTable"
+import RoomFeatureCategoryTable from "pages/_custom/Pages/Tables/RoomFeatureCategoryTable"
+import RoomTemplateTable from "pages/_custom/Pages/Tables/RoomTemplateTable"
+import SubRegionTable from "pages/_custom/Pages/Tables/SubRegionTable"
+import UserTable from "pages/_custom/Pages/Tables/UserTable"
 
 const authProtectedRoutes = [
   { path: "/hotel", component: <Hotel /> },
@@ -206,6 +205,7 @@ const authProtectedRoutes = [
   { path: "/countries", component: <CountryTable /> },
   { path: "/faqs", component: <FAQTable /> },
   { path: "/hotels", component: <HotelTable /> },
+  { path: "/hotel/:id", component: <Hotel /> },
   { path: "/hotel-features", component: <HotelFeatureTable /> },
   {
     path: "/hotel-feature-categories",
@@ -217,7 +217,6 @@ const authProtectedRoutes = [
   { path: "/regions", component: <RegionTable /> },
   { path: "/recensions", component: <RecensionTable /> },
   { path: "/reservations", component: <ReservationTable /> },
-  { path: "/reservation-templates", component: <ReservationTemplateTable /> },
   { path: "/roles", component: <RoleTable /> },
   { path: "/rooms", component: <RoomTable /> },
   { path: "/room-features", component: <RoomFeatureTable /> },

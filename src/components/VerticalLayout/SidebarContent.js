@@ -146,147 +146,145 @@ const SidebarContent = props => {
           <ul className="metismenu list-unstyled" id="side-menu">
             <li className="menu-title">{props.t("Menu")} </li>
             <li>
-              <Link to="/permissions">
+              <Link to="/#" className="has-arrow">
                 <i className="bx bx-home-circle"></i>
-                <span>{props.t("Permission")}</span>
+                <span>{props.t("Blogs")}</span>
               </Link>
+              <ul className="sub-menu">
+                <li>
+                  <Link to="/blog-posts">{props.t("Posts")}</Link>
+                </li>
+                <li>
+                  <Link to="/blog-comments">{props.t("Comments")}</Link>
+                </li>
+              </ul>
             </li>
+
             <li>
-              <Link to="/blog-comments">
+              <Link to="/#" className="has-arrow">
                 <i className="bx bx-home-circle"></i>
-                <span>{props.t("Blog Comments")}</span>
+                <span>{props.t("Places")}</span>
               </Link>
+              <ul className="sub-menu">
+                <li>
+                  <Link to="/countries">{props.t("Countries")}</Link>
+                </li>
+                <li>
+                  <Link to="/regions">{props.t("Regions")}</Link>
+                </li>
+                <li>
+                  <Link to="/sub-regions">{props.t("Sub Regions")}</Link>
+                </li>
+                <li>
+                  <Link to="/cities">{props.t("Cities")}</Link>
+                </li>
+              </ul>
             </li>
-            <li>
-              <Link to="/blog-posts">
-                <i className="bx bx-home-circle"></i>
-                <span>{props.t("Blog Posts")}</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/cancel-terms">
-                <i className="bx bx-home-circle"></i>
-                <span>{props.t("Cancel Terms")}</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/Cities">
-                <i className="bx bx-home-circle"></i>
-                <span>{props.t("Cities")}</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/countries">
-                <i className="bx bx-home-circle"></i>
-                <span>{props.t("Countries")}</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/faqs">
-                <i className="bx bx-home-circle"></i>
-                <span>{props.t("FAQs")}</span>
-              </Link>
-            </li>
+
             <li>
               <Link to="/hotels">
                 <i className="bx bx-home-circle"></i>
                 <span>{props.t("Hotels")}</span>
               </Link>
             </li>
+
             <li>
-              <Link to="/hotel-features">
+              <Link to="/#" className="has-arrow">
                 <i className="bx bx-home-circle"></i>
-                <span>{props.t("Hotel Features")}</span>
+                <span>{props.t("Hotel Details")}</span>
               </Link>
+              <ul className="sub-menu">
+                <li>
+                  <Link to="/hotel-feature-categories">
+                    {props.t("Feature Categories")}
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/hotel-features">{props.t("Features")}</Link>
+                </li>
+                <li>
+                  <Link to="/cancel-terms">{props.t("Cancel Terms")}</Link>
+                </li>
+              </ul>
             </li>
-            <li>
-              <Link to="/hotel-feature-categories">
-                <i className="bx bx-home-circle"></i>
-                <span>{props.t("Hotel Feature Categories")}</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/images">
-                <i className="bx bx-home-circle"></i>
-                <span>{props.t("Images")}</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/permissions">
-                <i className="bx bx-home-circle"></i>
-                <span>{props.t("Permissions")}</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/pricings">
-                <i className="bx bx-home-circle"></i>
-                <span>{props.t("Pricings")}</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/recensions">
-                <i className="bx bx-home-circle"></i>
-                <span>{props.t("Recensions")}</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/regions">
-                <i className="bx bx-home-circle"></i>
-                <span>{props.t("Regions")}</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/reservations">
-                <i className="bx bx-home-circle"></i>
-                <span>{props.t("Reservations")}</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/reservation-templates">
-                <i className="bx bx-home-circle"></i>
-                <span>{props.t("Reservation Templates")}</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/roles">
-                <i className="bx bx-home-circle"></i>
-                <span>{props.t("Roles")}</span>
-              </Link>
-            </li>
+
             <li>
               <Link to="/rooms">
                 <i className="bx bx-home-circle"></i>
                 <span>{props.t("Rooms")}</span>
               </Link>
             </li>
+
             <li>
-              <Link to="/room-features">
+              <Link to="/#" className="has-arrow">
                 <i className="bx bx-home-circle"></i>
-                <span>{props.t("Room Features")}</span>
+                <span>{props.t("Room Details")}</span>
+              </Link>
+              <ul className="sub-menu">
+                <li>
+                  <Link to="/room-feature-categories">
+                    {props.t("Feature Categories")}
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/room-features">{props.t("Features")}</Link>
+                </li>
+                <li>
+                  <Link to="/room-templates">{props.t("Templates")}</Link>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <Link to="/#" className="has-arrow">
+                <i className="bx bx-home-circle"></i>
+                <span>{props.t("User Management")}</span>
+              </Link>
+              <ul className="sub-menu">
+                <li>
+                  <Link to="/users">{props.t("Users")}</Link>
+                </li>
+                <li>
+                  <Link to="/roles">{props.t("Roles")}</Link>
+                </li>
+                <li>
+                  <Link to="/permissions">{props.t("Permissions")}</Link>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <Link to="/reservations">
+                <i className="bx bx-home-circle"></i>
+                <span>{props.t("Reservations")}</span>
               </Link>
             </li>
+
             <li>
-              <Link to="/room-feature-categories">
+              <Link to="/pricings">
                 <i className="bx bx-home-circle"></i>
-                <span>{props.t("Room Feature Categories")}</span>
+                <span>{props.t("Pricings")}</span>
               </Link>
             </li>
+
             <li>
-              <Link to="/room-templates">
+              <Link to="/images">
                 <i className="bx bx-home-circle"></i>
-                <span>{props.t("Room Templates")}</span>
+                <span>{props.t("Images")}</span>
               </Link>
             </li>
+
             <li>
-              <Link to="/sub-regions">
+              <Link to="/recensions">
                 <i className="bx bx-home-circle"></i>
-                <span>{props.t("Sub-regions")}</span>
+                <span>{props.t("Recensions")}</span>
               </Link>
             </li>
+
             <li>
-              <Link to="/users">
+              <Link to="/faqs">
                 <i className="bx bx-home-circle"></i>
-                <span>{props.t("Users")}</span>
+                <span>{props.t("FAQs")}</span>
               </Link>
             </li>
           </ul>

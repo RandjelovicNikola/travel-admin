@@ -1,5 +1,5 @@
 import React from "react"
-import MyTable from "../Components/MyTable/MyTable"
+import MyTable from "../../Components/MyTable/MyTable"
 import useRoomFeatureCategoryApi from "util/api/aRoomFeatureCategory"
 
 const RoomFeatureCategoryTable = () => {

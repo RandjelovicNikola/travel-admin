@@ -14,6 +14,7 @@ const SaveModalBody = memo(() => {
   } = useContext(ModalContext)
 
   const handleSave = useCallback(() => {
+    console.log(modalData)
     modalType == "edit"
       ? modalApi
           .update(modalData.id, modalData)
@@ -34,15 +35,18 @@ const SaveModalBody = memo(() => {
 
   return (
     <div className="modal-body">
-      {!!modalData &&
-        Object.entries(modalData).map((x, i) => (
-          <ModalInputComponent
-            key={i}
-            item={x}
-            emptyModel={modalEmptyModel}
-            handleInputChange={handleInputChange}
-          />
-        ))}
+      {!!modalEmptyModel &&
+        Object.entries(modalEmptyModel)
+          .filter(x => modalType == "edit" || x[0] != "id")
+          .map((x, i) => (
+            <ModalInputComponent
+              key={i}
+              item={[x[0], modalData[x[0]]]}
+              emptyModel={modalEmptyModel}
+              handleInputChange={handleInputChange}
+              disabled={modalType == "edit" && x[0] == "id"}
+            />
+          ))}
       <div className="modal-footer">
         <button
           type="button"

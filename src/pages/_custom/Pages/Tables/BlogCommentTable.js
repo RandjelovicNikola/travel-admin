@@ -1,6 +1,7 @@
 import React from "react"
-import MyTable from "../Components/MyTable/MyTable"
+import MyTable from "../../Components/MyTable/MyTable"
 import useBlogCommentApi from "util/api/aBlogComment"
+import { useLocation } from "react-router-dom"
 
 const BlogCommentTable = () => {
   const api = useBlogCommentApi()

@@ -1,5 +1,5 @@
 import React from "react"
-import MyTable from "../Components/MyTable/MyTable"
+import MyTable from "../../Components/MyTable/MyTable"
 import usePermissionApi from "util/api/aPermission"
 
 const PermissionTable = () => {

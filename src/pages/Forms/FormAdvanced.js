@@ -1,19 +1,31 @@
-import React, { useRef, useState } from "react";
-import { Button, Card, CardBody, Col, Container, Form, FormGroup, Input, InputGroup, Label, Row } from "reactstrap";
+import React, { useRef, useState } from "react"
+import {
+  Button,
+  Card,
+  CardBody,
+  Col,
+  Container,
+  Form,
+  FormGroup,
+  Input,
+  InputGroup,
+  Label,
+  Row,
+} from "reactstrap"
 
-import { SketchPicker } from "react-color";
-import { ColorPicker } from "@vtaits/react-color-picker";
-import "../../../node_modules/@vtaits/react-color-picker/dist/index.css";
-import "react-datepicker/dist/react-datepicker.css";
-import Switch from "react-switch";
-import Select from "react-select";
+import { SketchPicker } from "react-color"
+import { ColorPicker } from "@vtaits/react-color-picker"
+import "../../../node_modules/@vtaits/react-color-picker/dist/index.css"
+import "react-datepicker/dist/react-datepicker.css"
+import Switch from "react-switch"
+import Select from "react-select"
 
 //Import Flatepicker
-import "flatpickr/dist/themes/material_blue.css";
-import Flatpickr from "react-flatpickr";
+import "flatpickr/dist/themes/material_blue.css"
+import Flatpickr from "react-flatpickr"
 
 //Import Breadcrumb
-import Breadcrumbs from "../../components/Common/Breadcrumb";
+import Breadcrumbs from "../../components/Common/Breadcrumb"
 
 const Offsymbol = () => {
   return (
@@ -25,14 +37,14 @@ const Offsymbol = () => {
         height: "100%",
         fontSize: 12,
         color: "#fff",
-        paddingRight: 2
+        paddingRight: 2,
       }}
     >
       {" "}
       No
     </div>
-  );
-};
+  )
+}
 
 const OnSymbol = () => {
   return (
@@ -44,14 +56,14 @@ const OnSymbol = () => {
         height: "100%",
         fontSize: 12,
         color: "#fff",
-        paddingRight: 2
+        paddingRight: 2,
       }}
     >
       {" "}
       Yes
     </div>
-  );
-};
+  )
+}
 
 const optionGroup = [
   {
@@ -59,18 +71,18 @@ const optionGroup = [
     options: [
       { label: "Mustard", value: "Mustard" },
       { label: "Ketchup", value: "Ketchup" },
-      { label: "Relish", value: "Relish" }
-    ]
+      { label: "Relish", value: "Relish" },
+    ],
   },
   {
     label: "Camping",
     options: [
       { label: "Tent", value: "Tent" },
       { label: "Flashlight", value: "Flashlight" },
-      { label: "Toilet Paper", value: "Toilet Paper" }
-    ]
-  }
-];
+      { label: "Toilet Paper", value: "Toilet Paper" },
+    ],
+  },
+]
 
 const optionGroup1 = [
   {
@@ -78,18 +90,18 @@ const optionGroup1 = [
     options: [
       { label: "Mustard", value: "Mustard" },
       { label: "Ketchup", value: "Ketchup" },
-      { label: "Relish", value: "Relish" }
-    ]
+      { label: "Relish", value: "Relish" },
+    ],
   },
   {
     label: "Camping",
     options: [
       { label: "Tent", value: "Tent" },
       { label: "Flashlight", value: "Flashlight" },
-      { label: "Toilet Paper", value: "Toilet Paper" }
-    ]
-  }
-];
+      { label: "Toilet Paper", value: "Toilet Paper" },
+    ],
+  },
+]
 
 const optionGroup2 = [
   {
@@ -97,98 +109,97 @@ const optionGroup2 = [
     options: [
       { label: "Mustard", value: "Mustard" },
       { label: "Ketchup", value: "Ketchup" },
-      { label: "Relish", value: "Relish" }
-    ]
+      { label: "Relish", value: "Relish" },
+    ],
   },
   {
     label: "Camping",
     options: [
       { label: "Tent", value: "Tent" },
       { label: "Flashlight", value: "Flashlight" },
-      { label: "Toilet Paper", value: "Toilet Paper" }
-    ]
-  }
-];
+      { label: "Toilet Paper", value: "Toilet Paper" },
+    ],
+  },
+]
 
 const FormAdvanced = () => {
-
   //meta title
   document.title = "Form Advanced | Skote - React Admin & Dashboard Template"
 
-  const [sq1, setsq1] = useState(true);
-  const [sq2, setsq2] = useState(true);
-  const [sq3, setsq3] = useState(true);
-  const [color, setcolor] = useState("red");
-  const [colorRgb, setcolorRgb] = useState("red");
-  const [colorCust, setcolorCust] = useState("red");
-  const [colorHor, setcolorHor] = useState("#fffff");
-  const [colorRGBA, setcolorRGBA] = useState("rgba(0, 194, 255, 0.78)");
-  const [display_RGBA, setdisplay_RGBA] = useState(false);
+  const [sq1, setsq1] = useState(true)
+  const [sq2, setsq2] = useState(true)
+  const [sq3, setsq3] = useState(true)
+  const [color, setcolor] = useState("red")
+  const [colorRgb, setcolorRgb] = useState("red")
+  const [colorCust, setcolorCust] = useState("red")
+  const [colorHor, setcolorHor] = useState("#fffff")
+  const [colorRGBA, setcolorRGBA] = useState("rgba(0, 194, 255, 0.78)")
+  const [display_RGBA, setdisplay_RGBA] = useState(false)
 
   //** Datepicker Method */
-  const [date, setDate] = useState("");
-  const [fromate_date, setFromatDate] = useState("");
-  const [current_month, setMonth] = useState("");
-  const [current_month_short, setMonthShort] = useState("");
-  const [current_day, setDay] = useState("");
-  const [current_day_short, setDayShort] = useState("");
-  const [current_day_min, setDayMin] = useState("");
-  const [pick_date, setPickDate] = useState("");
+  const [date, setDate] = useState("")
+  const [fromate_date, setFromatDate] = useState("")
+  const [current_month, setMonth] = useState("")
+  const [current_month_short, setMonthShort] = useState("")
+  const [current_day, setDay] = useState("")
+  const [current_day_short, setDayShort] = useState("")
+  const [current_day_min, setDayMin] = useState("")
+  const [pick_date, setPickDate] = useState("")
 
-  const [disbadge, setdisbadge] = useState(true);
-  const [disthresh, setdisthresh] = useState(false);
-  const [placementbadge, setplacementbadge] = useState(false);
-  const [textcount, settextcount] = useState(0);
-  const [optioncount, setoptioncount] = useState(0);
-  const [placementcount, setplacementcount] = useState(0);
-  const [threshhold, setthreshhold] = useState(0);
-  const [threshholdcount, setthreshholdcount] = useState(0);
-  const [disDefault, setdisDefault] = useState(0);
-  const [textareabadge, settextareabadge] = useState(0);
-  const [simple_color, setsimple_color] = useState(0);
-  const [simple_color1, setsimple_color1] = useState(0);
-  const [simple_color2, setsimple_color2] = useState(0);
+  const [disbadge, setdisbadge] = useState(true)
+  const [disthresh, setdisthresh] = useState(false)
+  const [placementbadge, setplacementbadge] = useState(false)
+  const [textcount, settextcount] = useState(0)
+  const [optioncount, setoptioncount] = useState(0)
+  const [placementcount, setplacementcount] = useState(0)
+  const [threshhold, setthreshhold] = useState(0)
+  const [threshholdcount, setthreshholdcount] = useState(0)
+  const [disDefault, setdisDefault] = useState(0)
+  const [textareabadge, settextareabadge] = useState(0)
+  const [simple_color, setsimple_color] = useState(0)
+  const [simple_color1, setsimple_color1] = useState(0)
+  const [simple_color2, setsimple_color2] = useState(0)
 
-  const [switch1, setswitch1] = useState(true);
-  const [switch2, setswitch2] = useState(true);
-  const [switch3, setswitch3] = useState(true);
-  const [switch4, setswitch4] = useState(true);
-  const [switch5, setswitch5] = useState(true);
-  const [switch6, setswitch6] = useState(true);
-  const [switch7, setswitch7] = useState(true);
-  const [switch8, setswitch8] = useState(true);
-  const [switch9, setswitch9] = useState(true);
+  const [switch1, setswitch1] = useState(true)
+  const [switch2, setswitch2] = useState(true)
+  const [switch3, setswitch3] = useState(true)
+  const [switch4, setswitch4] = useState(true)
+  const [switch5, setswitch5] = useState(true)
+  const [switch6, setswitch6] = useState(true)
+  const [switch7, setswitch7] = useState(true)
+  const [switch8, setswitch8] = useState(true)
+  const [switch9, setswitch9] = useState(true)
 
-  const [data_attr, setdata_attr] = useState(56);
-  const [postfix, setpostfix] = useState(20);
-  const [withpostfix, setwithpostfix] = useState(20);
-  const [empty_val, setempty_val] = useState(0);
-  const [not_attr, setnot_attr] = useState(15);
-  const [explicit_val, setexplicit_val] = useState(33);
+  const [data_attr, setdata_attr] = useState(56)
+  const [postfix, setpostfix] = useState(20)
+  const [withpostfix, setwithpostfix] = useState(20)
+  const [empty_val, setempty_val] = useState(0)
+  const [not_attr, setnot_attr] = useState(15)
+  const [explicit_val, setexplicit_val] = useState(33)
 
-  const max_len = 25;
+  const max_len = 25
 
-  const [selectedGroup, setselectedGroup] = useState(null);
-  const [selectedMulti, setselectedMulti] = useState(null);
-  const [selectedMulti1, setselectedMulti1] = useState(null);
-  const [selectedMulti2, setselectedMulti2] = useState(null);
-  const [selectedMulti3, setselectedMulti3] = useState(null);
+  const [selectedGroup, setselectedGroup] = useState(null)
+  const [selectedMulti, setselectedMulti] = useState(null)
+  const [selectedMulti1, setselectedMulti1] = useState(null)
+  const [selectedMulti2, setselectedMulti2] = useState(null)
+  const [selectedMulti3, setselectedMulti3] = useState(null)
 
   const onDrag = c1 => {
-    setcolor(c1);
-  };
+    setcolor(c1)
+  }
   const onDragRgb = c1 => {
-    setcolorRgb(c1);
-  };
+    setcolorRgb(c1)
+  }
   const onDragCust = c1 => {
-    setcolorCust(c1);
-  };
+    setcolorCust(c1)
+  }
   const handleHor = color => {
-    setcolorHor(color.hex);
-  };
+    setcolorHor(color.hex)
+  }
 
   function handleRGBA() {
-    setdisplay_RGBA(!display_RGBA);
+    setdisplay_RGBA(!display_RGBA)
   }
 
   const onSwatchHover_RGBA = color => {
@@ -201,96 +212,96 @@ const FormAdvanced = () => {
       color.rgb.b +
       "," +
       color.rgb.a +
-      ")";
-    setcolorRGBA(format);
-  };
+      ")"
+    setcolorRGBA(format)
+  }
 
   function threshholdchange(event) {
-    const count = event.target.value.length;
-    const remain_val = max_len - 20;
+    const count = event.target.value.length
+    const remain_val = max_len - 20
 
     if (remain_val <= count) {
-      setdisthresh(true);
+      setdisthresh(true)
     } else {
-      setdisthresh(false);
+      setdisthresh(false)
     }
-    setthreshholdcount(event.target.value.length);
+    setthreshholdcount(event.target.value.length)
   }
 
   function threshholdDefault(event) {
-    const count = event.target.value.length;
+    const count = event.target.value.length
     if (count > 0) {
-      setdisDefault(true);
+      setdisDefault(true)
     } else {
-      setdisDefault(false);
+      setdisDefault(false)
     }
-    setthreshhold(event.target.value.length);
+    setthreshhold(event.target.value.length)
   }
 
   function optionchange(event) {
-    const count = event.target.value.length;
+    const count = event.target.value.length
     if (count > 0) {
-      setdisbadge(true);
+      setdisbadge(true)
     } else {
-      setdisbadge(false);
+      setdisbadge(false)
     }
-    setoptioncount(event.target.value.length);
+    setoptioncount(event.target.value.length)
   }
 
   function placementchange(event) {
-    const count = event.target.value.length;
+    const count = event.target.value.length
     if (count > 0) {
-      setplacementbadge(true);
+      setplacementbadge(true)
     } else {
-      setplacementbadge(false);
+      setplacementbadge(false)
     }
-    setplacementcount(event.target.value.length);
+    setplacementcount(event.target.value.length)
   }
 
   function textareachange(event) {
-    const count = event.target.value.length;
+    const count = event.target.value.length
     if (count > 0) {
-      settextareabadge(true);
+      settextareabadge(true)
     } else {
-      settextareabadge(false);
+      settextareabadge(false)
     }
-    settextcount(event.target.value.length);
+    settextcount(event.target.value.length)
   }
 
   function handleSelectGroup(selectedGroup) {
-    setselectedGroup(selectedGroup);
+    setselectedGroup(selectedGroup)
   }
 
   function handleMulti(selectedMulti) {
-    setselectedMulti(selectedMulti);
+    setselectedMulti(selectedMulti)
   }
 
   function handleMulti1(selectedMulti1) {
-    setselectedMulti1(selectedMulti1);
+    setselectedMulti1(selectedMulti1)
   }
 
   function handleMulti2(selectedMulti2) {
-    setselectedMulti2(selectedMulti2);
+    setselectedMulti2(selectedMulti2)
   }
 
   function handleMulti3(selectedMulti3) {
-    setselectedMulti3(selectedMulti3);
+    setselectedMulti3(selectedMulti3)
   }
 
   /*
     get date Method
   **/
   const getDateMethod = () => {
-    setDate(new Date());
-  };
+    setDate(new Date())
+  }
   const getDateFormateMethod = () => {
-    let today = new Date();
-    const dd = today.getDate().toString();
-    const mm = today.getMonth() + 1;
-    const yyyy = today.getFullYear();
-    const fromate_date = (today = dd + "/" + mm + "/" + yyyy);
-    setFromatDate(fromate_date);
-  };
+    let today = new Date()
+    const dd = today.getDate().toString()
+    const mm = today.getMonth() + 1
+    const yyyy = today.getFullYear()
+    const fromate_date = (today = dd + "/" + mm + "/" + yyyy)
+    setFromatDate(fromate_date)
+  }
   const getMonthMethod = () => {
     const months = [
       "January",
@@ -304,12 +315,12 @@ const FormAdvanced = () => {
       "September",
       "October",
       "November",
-      "December"
-    ];
-    const d = new Date();
-    const current_month = months[d.getMonth()];
-    setMonth(current_month);
-  };
+      "December",
+    ]
+    const d = new Date()
+    const current_month = months[d.getMonth()]
+    setMonth(current_month)
+  }
 
   const getMonthShortMethod = () => {
     const months = [
@@ -324,12 +335,12 @@ const FormAdvanced = () => {
       "Sep",
       "Oct",
       "Nov",
-      "Dec"
-    ];
-    const d = new Date();
-    const current_month_short = months[d.getMonth()];
-    setMonthShort(current_month_short);
-  };
+      "Dec",
+    ]
+    const d = new Date()
+    const current_month_short = months[d.getMonth()]
+    setMonthShort(current_month_short)
+  }
 
   const getDayMethod = () => {
     const day = [
@@ -339,49 +350,48 @@ const FormAdvanced = () => {
       "Wednesday",
       "Thursday",
       "Friday",
-      "Saturday"
-    ];
-    const d = new Date();
-    const current_day = day[d.getDay()];
-    setDay(current_day);
-  };
+      "Saturday",
+    ]
+    const d = new Date()
+    const current_day = day[d.getDay()]
+    setDay(current_day)
+  }
 
   const getDayShort = () => {
-    const day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-    const d = new Date();
-    const current_day_short = day[d.getDay()];
-    setDayShort(current_day_short);
-  };
+    const day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    const d = new Date()
+    const current_day_short = day[d.getDay()]
+    setDayShort(current_day_short)
+  }
 
   const getDayMin = () => {
-    const day = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
-    const d = new Date();
-    const current_day_min = day[d.getDay()];
-    setDayMin(current_day_min);
-  };
+    const day = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
+    const d = new Date()
+    const current_day_min = day[d.getDay()]
+    setDayMin(current_day_min)
+  }
 
   const picks = () => {
-    setPickDate(new Date());
-  };
+    setPickDate(new Date())
+  }
 
   const resentValue = () => {
-    setPickDate(" ");
-  };
+    setPickDate(" ")
+  }
 
-  const flatpickrRef = useRef(null);
+  const flatpickrRef = useRef(null)
 
   const showValue = () => {
     if (flatpickrRef.current) {
-      flatpickrRef.current.flatpickr.open();
+      flatpickrRef.current.flatpickr.open()
     }
   }
 
   const closeValue = () => {
     if (flatpickrRef.current) {
-      flatpickrRef.current.flatpickr.close();
+      flatpickrRef.current.flatpickr.close()
     }
   }
-
 
   return (
     <React.Fragment>
@@ -407,7 +417,7 @@ const FormAdvanced = () => {
                           <Select
                             value={selectedGroup}
                             onChange={() => {
-                              handleSelectGroup();
+                              handleSelectGroup()
                             }}
                             options={optionGroup}
                             className="select2-selection"
@@ -421,7 +431,7 @@ const FormAdvanced = () => {
                             value={selectedMulti}
                             isMulti={true}
                             onChange={() => {
-                              handleMulti();
+                              handleMulti()
                             }}
                             options={optionGroup}
                             className="select2-selection"
@@ -434,11 +444,11 @@ const FormAdvanced = () => {
                             value={selectedMulti1}
                             isMulti={true}
                             onChange={() => {
-                              handleMulti1();
+                              handleMulti1()
                             }}
                             options={optionGroup}
                             className="select2-selection"
-                          // isDisabled={true}
+                            // isDisabled={true}
                           />
                         </div>
                       </Col>
@@ -449,7 +459,7 @@ const FormAdvanced = () => {
                           <Select
                             value={selectedMulti2}
                             onChange={() => {
-                              handleMulti2();
+                              handleMulti2()
                             }}
                             options={optionGroup1}
                             className="select2-selection"
@@ -461,11 +471,10 @@ const FormAdvanced = () => {
                           <Select
                             value={selectedMulti3}
                             onChange={() => {
-                              handleMulti3();
+                              handleMulti3()
                             }}
                             options={optionGroup2}
                             className="select2-selection"
-
                           />
                         </div>
                       </Col>
@@ -494,7 +503,7 @@ const FormAdvanced = () => {
                         className="colorpicker-default"
                         value={color}
                         onClick={() => {
-                          setsimple_color(!simple_color);
+                          setsimple_color(!simple_color)
                         }}
                         readOnly
                       />
@@ -543,14 +552,14 @@ const FormAdvanced = () => {
                           <span
                             className="input-group-text colorpicker-input-addon"
                             onClick={() => {
-                              setsimple_color1(!simple_color1);
+                              setsimple_color1(!simple_color1)
                             }}
                           >
                             <i
                               style={{
                                 height: "16px",
                                 width: "16px",
-                                background: colorRgb
+                                background: colorRgb,
                               }}
                             />
                           </span>
@@ -571,7 +580,7 @@ const FormAdvanced = () => {
                       <Input
                         type="text"
                         onClick={() => {
-                          setsimple_color2(!simple_color2);
+                          setsimple_color2(!simple_color2)
                         }}
                         value={colorHor}
                         readOnly
@@ -618,7 +627,7 @@ const FormAdvanced = () => {
                           options={{
                             enableTime: true,
                             noCalendar: true,
-                            dateFormat: "H:i"
+                            dateFormat: "H:i",
                           }}
                         />
                         <div className="input-group-append">
@@ -639,7 +648,7 @@ const FormAdvanced = () => {
                             enableTime: true,
                             noCalendar: true,
                             dateFormat: "H:i",
-                            time_24hr: true
+                            time_24hr: true,
                           }}
                         />
                         <div className="input-group-append">
@@ -660,7 +669,7 @@ const FormAdvanced = () => {
                           options={{
                             enableTime: true,
                             noCalendar: true,
-                            dateFormat: "H:i"
+                            dateFormat: "H:i",
                           }}
                         />
                         <div className="input-group-append">
@@ -692,7 +701,7 @@ const FormAdvanced = () => {
                           options={{
                             altInput: true,
                             altFormat: "F j, Y",
-                            dateFormat: "Y-m-d"
+                            dateFormat: "Y-m-d",
                           }}
                         />
                       </InputGroup>
@@ -706,7 +715,7 @@ const FormAdvanced = () => {
                           options={{
                             altInput: true,
                             altFormat: "F j, Y",
-                            dateFormat: "Y-m-d"
+                            dateFormat: "Y-m-d",
                           }}
                         />
                       </InputGroup>
@@ -722,7 +731,7 @@ const FormAdvanced = () => {
                             altInput: true,
                             altFormat: "F j, Y",
                             mode: "multiple",
-                            dateFormat: "Y-m-d"
+                            dateFormat: "Y-m-d",
                           }}
                         />
                       </div>
@@ -736,8 +745,9 @@ const FormAdvanced = () => {
                           placeholder="dd M,yyyy"
                           options={{
                             mode: "range",
-                            dateFormat: "Y-m-d"
+                            dateFormat: "Y-m-d",
                           }}
+                          onChange={e => console.log(e)}
                         />
                       </InputGroup>
                     </FormGroup>
@@ -751,7 +761,7 @@ const FormAdvanced = () => {
                           inline: true,
                           altInput: true,
                           altFormat: "F j, Y",
-                          dateFormat: "Y-m-d"
+                          dateFormat: "Y-m-d",
                         }}
                       />
                     </div>
@@ -781,7 +791,7 @@ const FormAdvanced = () => {
                     maxLength="25"
                     name="defaultconfig"
                     onChange={e => {
-                      threshholdDefault(e);
+                      threshholdDefault(e)
                     }}
                     id="defaultconfig"
                   />
@@ -801,7 +811,7 @@ const FormAdvanced = () => {
                       type="text"
                       maxLength={max_len}
                       onChange={e => {
-                        threshholdchange(e);
+                        threshholdchange(e)
                       }}
                       name="thresholdconfig"
                       id="thresholdconfig"
@@ -823,7 +833,7 @@ const FormAdvanced = () => {
                       type="text"
                       maxLength="25"
                       onChange={e => {
-                        optionchange(e);
+                        optionchange(e)
                       }}
                       name="alloptions"
                       id="alloptions"
@@ -841,7 +851,7 @@ const FormAdvanced = () => {
                       type="text"
                       maxLength="25"
                       onChange={e => {
-                        placementchange(e);
+                        placementchange(e)
                       }}
                       name="placement"
                       id="placement"
@@ -866,7 +876,7 @@ const FormAdvanced = () => {
                       type="textarea"
                       id="textarea"
                       onChange={e => {
-                        textareachange(e);
+                        textareachange(e)
                       }}
                       maxLength="225"
                       rows="3"
@@ -898,7 +908,7 @@ const FormAdvanced = () => {
                         <div
                           className="input-group-append"
                           onClick={() => {
-                            setdata_attr(data_attr - 1);
+                            setdata_attr(data_attr - 1)
                           }}
                         >
                           <Button type="button" color="primary">
@@ -915,7 +925,7 @@ const FormAdvanced = () => {
                         <div
                           className="input-group-append"
                           onClick={() => {
-                            setdata_attr(data_attr + 1);
+                            setdata_attr(data_attr + 1)
                           }}
                         >
                           <Button type="button" color="primary">
@@ -930,7 +940,7 @@ const FormAdvanced = () => {
                         <span
                           className="input-group-btn input-group-prepend"
                           onClick={() => {
-                            setpostfix(postfix - 1);
+                            setpostfix(postfix - 1)
                           }}
                         >
                           <Button type="button" color="primary">
@@ -951,7 +961,7 @@ const FormAdvanced = () => {
                           <Button
                             type="button"
                             onClick={() => {
-                              setpostfix(postfix + 1);
+                              setpostfix(postfix + 1)
                             }}
                             color="primary"
                           >
@@ -967,7 +977,7 @@ const FormAdvanced = () => {
                         <span
                           className="input-group-btn input-group-prepend"
                           onClick={() => {
-                            setwithpostfix(withpostfix - 1);
+                            setwithpostfix(withpostfix - 1)
                           }}
                         >
                           <Button type="button" color="primary">
@@ -984,13 +994,12 @@ const FormAdvanced = () => {
                           placeholder="number"
                           readOnly
                         />
-                        <span className="input-group-append">
-                        </span>
+                        <span className="input-group-append"></span>
                         <span className="input-group-append">
                           <Button
                             type="button"
                             onClick={() => {
-                              setwithpostfix(withpostfix + 1);
+                              setwithpostfix(withpostfix + 1)
                             }}
                             color="primary"
                           >
@@ -1006,7 +1015,7 @@ const FormAdvanced = () => {
                         <div
                           className="input-group-append"
                           onClick={() => {
-                            setempty_val(empty_val - 1);
+                            setempty_val(empty_val - 1)
                           }}
                         >
                           <Button type="button" color="primary">
@@ -1023,7 +1032,7 @@ const FormAdvanced = () => {
                         <div
                           className="input-group-append"
                           onClick={() => {
-                            setempty_val(empty_val + 1);
+                            setempty_val(empty_val + 1)
                           }}
                         >
                           <Button type="button" color="primary">
@@ -1040,7 +1049,7 @@ const FormAdvanced = () => {
                         <div
                           className="input-group-append"
                           onClick={() => {
-                            setnot_attr(not_attr - 1);
+                            setnot_attr(not_attr - 1)
                           }}
                         >
                           <Button type="button" color="primary">
@@ -1057,7 +1066,7 @@ const FormAdvanced = () => {
                         <div
                           className="input-group-append"
                           onClick={() => {
-                            setnot_attr(not_attr + 1);
+                            setnot_attr(not_attr + 1)
                           }}
                         >
                           <Button type="button" color="primary">
@@ -1075,7 +1084,7 @@ const FormAdvanced = () => {
                         <div
                           className="input-group-append"
                           onClick={() => {
-                            setexplicit_val(explicit_val - 1);
+                            setexplicit_val(explicit_val - 1)
                           }}
                         >
                           <Button type="button" color="primary">
@@ -1092,7 +1101,7 @@ const FormAdvanced = () => {
                         <div
                           className="input-group-append"
                           onClick={() => {
-                            setexplicit_val(explicit_val + 1);
+                            setexplicit_val(explicit_val + 1)
                           }}
                         >
                           <Button type="button" color="primary">
@@ -1126,7 +1135,7 @@ const FormAdvanced = () => {
                           className="me-1 mb-sm-8 mb-2"
                           onColor="#626ed4"
                           onChange={() => {
-                            setswitch1(!switch1);
+                            setswitch1(!switch1)
                           }}
                           checked={switch1}
                         />
@@ -1136,7 +1145,7 @@ const FormAdvanced = () => {
                           className="me-1 mb-sm-8 mb-2"
                           onColor="#a2a2a2"
                           onChange={() => {
-                            setswitch2(!switch2);
+                            setswitch2(!switch2)
                           }}
                           checked={switch2}
                         />
@@ -1146,7 +1155,7 @@ const FormAdvanced = () => {
                           className="me-1 mb-sm-8 mb-2"
                           onColor="#02a499"
                           onChange={() => {
-                            setswitch3(!switch3);
+                            setswitch3(!switch3)
                           }}
                           checked={switch3}
                         />
@@ -1156,7 +1165,7 @@ const FormAdvanced = () => {
                           className="me-1 mb-sm-8 mb-2"
                           onColor="#626ed4"
                           onChange={() => {
-                            setswitch4(!switch4);
+                            setswitch4(!switch4)
                           }}
                           checked={switch4}
                         />
@@ -1167,7 +1176,7 @@ const FormAdvanced = () => {
                           className="me-1 mb-sm-8 mb-2"
                           onColor="#02a499"
                           onChange={() => {
-                            setswitch5(!switch5);
+                            setswitch5(!switch5)
                           }}
                           checked={switch5}
                         />
@@ -1178,7 +1187,7 @@ const FormAdvanced = () => {
                           className="me-1 mb-sm-8 mb-2"
                           onColor="#38a4f8"
                           onChange={() => {
-                            setswitch6(!switch6);
+                            setswitch6(!switch6)
                           }}
                           checked={switch6}
                         />
@@ -1189,7 +1198,7 @@ const FormAdvanced = () => {
                           className="me-1 mb-sm-8 mb-2"
                           onColor="#f8b425"
                           onChange={() => {
-                            setswitch7(!switch7);
+                            setswitch7(!switch7)
                           }}
                           checked={switch7}
                         />
@@ -1200,7 +1209,7 @@ const FormAdvanced = () => {
                           className="me-1 mb-sm-8 mb-2"
                           onColor="#ec4561"
                           onChange={() => {
-                            setswitch8(!switch8);
+                            setswitch8(!switch8)
                           }}
                           checked={switch8}
                         />
@@ -1211,7 +1220,7 @@ const FormAdvanced = () => {
                           className="me-1 mb-sm-8 mb-2"
                           onColor="#2a3142"
                           onChange={() => {
-                            setswitch9(!switch9);
+                            setswitch9(!switch9)
                           }}
                           checked={switch9}
                         />
@@ -1227,9 +1236,7 @@ const FormAdvanced = () => {
                               id="square-switch1"
                               className="switch"
                               defaultChecked={sq1}
-                              onChange={() =>
-                                setsq1(!sq1)
-                              }
+                              onChange={() => setsq1(!sq1)}
                             />
                             <label
                               htmlFor="square-switch1"
@@ -1243,9 +1250,7 @@ const FormAdvanced = () => {
                               id="square-switch2"
                               className="switch switch-info"
                               defaultChecked={sq2}
-                              onChange={() =>
-                                setsq2(!sq2)
-                              }
+                              onChange={() => setsq2(!sq2)}
                             />
                             <label
                               htmlFor="square-switch2"
@@ -1259,9 +1264,7 @@ const FormAdvanced = () => {
                               id="square-switch3"
                               className="switch switch-bool"
                               defaultChecked={sq3}
-                              onChange={() =>
-                                setsq3(!sq3)
-                              }
+                              onChange={() => setsq3(!sq3)}
                             />
                             <label
                               htmlFor="square-switch3"
@@ -1296,7 +1299,7 @@ const FormAdvanced = () => {
                               placeholder="Pick a date"
                               options={{
                                 altInput: true,
-                                dateFormat: "d-m-y"
+                                dateFormat: "d-m-y",
                               }}
                             />
                             <div className="input-group-append">
@@ -1321,33 +1324,90 @@ const FormAdvanced = () => {
                         <h4 className="font-size-14 mb-3">Options</h4>
                         <div className="docs-options">
                           <div className="input-group mb-3">
-                            <span className="input-group-text" id="option-date">date</span>
-                            <Input type="text" name="date" defaultValue="" aria-describedby="option-date" placeholder="null" />
+                            <span className="input-group-text" id="option-date">
+                              date
+                            </span>
+                            <Input
+                              type="text"
+                              name="date"
+                              defaultValue=""
+                              aria-describedby="option-date"
+                              placeholder="null"
+                            />
                           </div>
                           <div className="input-group mb-3">
-                            <span className="input-group-text" id="option-format">format</span>
-                            <Input type="text" name="format" defaultValue="mm/dd/yyyy" aria-describedby="option-format" placeholder="mm/dd/yyyy" />
+                            <span
+                              className="input-group-text"
+                              id="option-format"
+                            >
+                              format
+                            </span>
+                            <Input
+                              type="text"
+                              name="format"
+                              defaultValue="mm/dd/yyyy"
+                              aria-describedby="option-format"
+                              placeholder="mm/dd/yyyy"
+                            />
                           </div>
                           <div className="input-group mb-3">
-                            <span className="input-group-text" id="option-startDate">startDate</span>
-                            <Input type="text" name="startDate" aria-describedby="option-startDate" placeholder="null" />
+                            <span
+                              className="input-group-text"
+                              id="option-startDate"
+                            >
+                              startDate
+                            </span>
+                            <Input
+                              type="text"
+                              name="startDate"
+                              aria-describedby="option-startDate"
+                              placeholder="null"
+                            />
                           </div>
                           <div className="input-group mb-3">
-                            <span className="input-group-text" id="option-endDate">endDate</span>
-                            <Input type="text" name="endDate" aria-describedby="option-endDate" placeholder="null" />
+                            <span
+                              className="input-group-text"
+                              id="option-endDate"
+                            >
+                              endDate
+                            </span>
+                            <Input
+                              type="text"
+                              name="endDate"
+                              aria-describedby="option-endDate"
+                              placeholder="null"
+                            />
                           </div>
 
                           <div className="input-group mb-3">
-                            <span className="input-group-text" id="option-startView">startView</span>
-                            <select className="form-control" id="option-startView" name="startView">
+                            <span
+                              className="input-group-text"
+                              id="option-startView"
+                            >
+                              startView
+                            </span>
+                            <select
+                              className="form-control"
+                              id="option-startView"
+                              name="startView"
+                            >
                               <option defaultValue="0">0</option>
                               <option value="1">1</option>
                               <option value="2">2</option>
                             </select>
                           </div>
                           <div className="input-group mb-3">
-                            <span className="input-group-text" id="option-weekStart">weekStart</span>
-                            <select className="form-control" id="option-weekStart" name="weekStart">
+                            <span
+                              className="input-group-text"
+                              id="option-weekStart"
+                            >
+                              weekStart
+                            </span>
+                            <select
+                              className="form-control"
+                              id="option-weekStart"
+                              name="weekStart"
+                            >
                               <option defaultValue="0">0</option>
                               <option value="1">1</option>
                               <option value="2">2</option>
@@ -1358,12 +1418,34 @@ const FormAdvanced = () => {
                             </select>
                           </div>
                           <div className="input-group mb-3">
-                            <span className="input-group-text" id="option-offset">offset</span>
-                            <Input type="number" name="offset" defaultValue="10" aria-describedby="option-offset" placeholder="offset" />
+                            <span
+                              className="input-group-text"
+                              id="option-offset"
+                            >
+                              offset
+                            </span>
+                            <Input
+                              type="number"
+                              name="offset"
+                              defaultValue="10"
+                              aria-describedby="option-offset"
+                              placeholder="offset"
+                            />
                           </div>
                           <div className="input-group mb-3">
-                            <span className="input-group-text" id="option-zIndex">zIndex</span>
-                            <Input type="number" name="zIndex" defaultValue="1000" aria-describedby="option-zIndex" placeholder="zIndex" />
+                            <span
+                              className="input-group-text"
+                              id="option-zIndex"
+                            >
+                              zIndex
+                            </span>
+                            <Input
+                              type="number"
+                              name="zIndex"
+                              defaultValue="1000"
+                              aria-describedby="option-zIndex"
+                              placeholder="zIndex"
+                            />
                           </div>
                         </div>
                       </div>
@@ -1376,44 +1458,114 @@ const FormAdvanced = () => {
                           <ul className="list-group">
                             <li className="list-group-item">
                               <div className="form-check">
-                                <input className="form-check-input" id="container" type="checkbox" name="container" />
-                                <label className="form-check-label" htmlFor="container">container</label>
+                                <input
+                                  className="form-check-input"
+                                  id="container"
+                                  type="checkbox"
+                                  name="container"
+                                />
+                                <label
+                                  className="form-check-label"
+                                  htmlFor="container"
+                                >
+                                  container
+                                </label>
                               </div>
                             </li>
                             <li className="list-group-item">
                               <div className="form-check">
-                                <input className="form-check-input" id="trigger" type="checkbox" name="trigger" />
-                                <label className="form-check-label" htmlFor="trigger">trigger</label>
+                                <input
+                                  className="form-check-input"
+                                  id="trigger"
+                                  type="checkbox"
+                                  name="trigger"
+                                />
+                                <label
+                                  className="form-check-label"
+                                  htmlFor="trigger"
+                                >
+                                  trigger
+                                </label>
                               </div>
                             </li>
                             <li className="list-group-item">
                               <div className="form-check">
-                                <input className="form-check-input" id="inline" type="checkbox" name="inline" />
-                                <label className="form-check-label" htmlFor="inline">inline</label>
+                                <input
+                                  className="form-check-input"
+                                  id="inline"
+                                  type="checkbox"
+                                  name="inline"
+                                />
+                                <label
+                                  className="form-check-label"
+                                  htmlFor="inline"
+                                >
+                                  inline
+                                </label>
                               </div>
                             </li>
                             <li className="list-group-item">
                               <div className="form-check">
-                                <input className="form-check-input" id="autoShow" type="checkbox" name="autoShow" />
-                                <label className="form-check-label" htmlFor="autoShow">autoShow</label>
+                                <input
+                                  className="form-check-input"
+                                  id="autoShow"
+                                  type="checkbox"
+                                  name="autoShow"
+                                />
+                                <label
+                                  className="form-check-label"
+                                  htmlFor="autoShow"
+                                >
+                                  autoShow
+                                </label>
                               </div>
                             </li>
                             <li className="list-group-item">
                               <div className="form-check">
-                                <input className="form-check-input" id="autoHide" type="checkbox" name="autoHide" />
-                                <label className="form-check-label" htmlFor="autoHide">autoHide</label>
+                                <input
+                                  className="form-check-input"
+                                  id="autoHide"
+                                  type="checkbox"
+                                  name="autoHide"
+                                />
+                                <label
+                                  className="form-check-label"
+                                  htmlFor="autoHide"
+                                >
+                                  autoHide
+                                </label>
                               </div>
                             </li>
                             <li className="list-group-item">
                               <div className="form-check">
-                                <input className="form-check-input" id="autoPick" type="checkbox" name="autoPick" />
-                                <label className="form-check-label" htmlFor="autoPick">autoPick</label>
+                                <input
+                                  className="form-check-input"
+                                  id="autoPick"
+                                  type="checkbox"
+                                  name="autoPick"
+                                />
+                                <label
+                                  className="form-check-label"
+                                  htmlFor="autoPick"
+                                >
+                                  autoPick
+                                </label>
                               </div>
                             </li>
                             <li className="list-group-item">
                               <div className="form-check">
-                                <input className="form-check-input" id="yearFirst" type="checkbox" name="yearFirst" />
-                                <label className="form-check-label" htmlFor="yearFirst">yearFirst</label>
+                                <input
+                                  className="form-check-input"
+                                  id="yearFirst"
+                                  type="checkbox"
+                                  name="yearFirst"
+                                />
+                                <label
+                                  className="form-check-label"
+                                  htmlFor="yearFirst"
+                                >
+                                  yearFirst
+                                </label>
                               </div>
                             </li>
                           </ul>
@@ -1541,16 +1693,52 @@ const FormAdvanced = () => {
                             />
                           </InputGroup>
                           <div className="btn-group mb-3 d-flex" role="group">
-                            <button type="button" className="btn btn-primary" onClick={showValue}>Show</button>
-                            <button type="button" className="btn btn-primary" onClick={closeValue}>Hide</button>
+                            <button
+                              type="button"
+                              className="btn btn-primary"
+                              onClick={showValue}
+                            >
+                              Show
+                            </button>
+                            <button
+                              type="button"
+                              className="btn btn-primary"
+                              onClick={closeValue}
+                            >
+                              Hide
+                            </button>
                           </div>
                           <div className="btn-group mb-3 d-flex" role="group">
-                            <button type="button" className="btn btn-primary" onClick={picks}>Pick</button>
-                            <button type="button" className="btn btn-primary" onClick={showValue}>Update</button>
+                            <button
+                              type="button"
+                              className="btn btn-primary"
+                              onClick={picks}
+                            >
+                              Pick
+                            </button>
+                            <button
+                              type="button"
+                              className="btn btn-primary"
+                              onClick={showValue}
+                            >
+                              Update
+                            </button>
                           </div>
                           <div className="btn-group mb-3 d-flex" role="group">
-                            <button type="button" className="btn btn-primary" onClick={resentValue}>Reset</button>
-                            <button type="button" className="btn btn-primary" data-method="destroy">Destroy</button>
+                            <button
+                              type="button"
+                              className="btn btn-primary"
+                              onClick={resentValue}
+                            >
+                              Reset
+                            </button>
+                            <button
+                              type="button"
+                              className="btn btn-primary"
+                              data-method="destroy"
+                            >
+                              Destroy
+                            </button>
                           </div>
                         </div>
                       </div>
@@ -1563,7 +1751,7 @@ const FormAdvanced = () => {
         </Container>
       </div>
     </React.Fragment>
-  );
-};
+  )
+}
 
-export default FormAdvanced;
+export default FormAdvanced

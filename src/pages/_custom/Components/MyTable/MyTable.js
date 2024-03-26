@@ -4,19 +4,27 @@ import MySeparator from "../../Common/MySeparator"
 import { ModalContext } from "util/providers/ModalProvider"
 import { Link } from "react-router-dom"
 import { toCapitalized } from "util/tools/tDisplay"
-import ModalInputComponent from "../MyModal/ModalInputComponent"
+import SearchInputComponent from "./SearchInputComponent"
+import { QueryToObject } from "util/tools/tUri"
 
 const MyTable = ({ title, api, actions }) => {
+  const [isFirstFetch, setIsFirstFetch] = useState(true)
   const [data, setData] = useState()
   const [totalCount, setTotalCount] = useState(0)
   const [emptyModel, setEmptyModel] = useState()
-  const [searchModel, setSearchModel] = useState({})
-  const [isFirstFetch, setIsFirstFetch] = useState(true)
+  const [searchModel, setSearchModel] = useState(
+    QueryToObject(window.location.search) ?? {}
+  )
 
   const debounceTimeout = useRef(null)
 
-  const { openModal, setModalType, refresh, setModalEmptyModel } =
-    useContext(ModalContext)
+  const {
+    openModal,
+    setModalType,
+    refresh,
+    setModalEmptyModel,
+    setModalTitle,
+  } = useContext(ModalContext)
 
   const handleFetch = () => {
     const filteredSearchModel = Object.fromEntries(
@@ -35,8 +43,14 @@ const MyTable = ({ title, api, actions }) => {
     })
   }
 
+  const handleClear = () => {
+    setIsFirstFetch(true)
+    setSearchModel({})
+  }
+
   const handleAdd = () => {
     setModalEmptyModel(emptyModel)
+    setModalTitle(`Add ${title}`)
     setModalType("add")
 
     var addData = {}
@@ -49,6 +63,7 @@ const MyTable = ({ title, api, actions }) => {
 
   const handleEdit = item => {
     setModalEmptyModel(emptyModel)
+    setModalTitle(`Edit ${title}`)
     setModalType("edit")
     openModal({ data: item, api })
   }
@@ -102,10 +117,13 @@ const MyTable = ({ title, api, actions }) => {
 
     if (currentEnd > totalCount) currentEnd = totalCount
 
+    var any = !!totalCount
+
     return (
       <Col sm={12} md={5}>
         <div className="dataTables_info">
-          Showing {currentStart} to {currentEnd} of {totalCount} items
+          Showing {any ? currentStart || 1 : 0} to {currentEnd} of {totalCount}{" "}
+          items
         </div>
       </Col>
     )
@@ -164,20 +182,29 @@ const MyTable = ({ title, api, actions }) => {
               >
                 Refresh
               </button>
+              <MySeparator ver={false} />
+              <button
+                onClick={handleClear}
+                type="button"
+                className="btn btn-primary btn-sm"
+              >
+                Clear
+              </button>
             </div>
           </div>
 
           <MySeparator gap={20} />
-          {!!searchModel && (
+          {!!searchModel && !!emptyModel && (
             <div
               style={{
                 display: "flex",
                 flexDirection: "row",
                 flexWrap: "wrap",
+                columnGap: 20,
               }}
             >
               {Object.entries(searchModel).map((x, i) => (
-                <ModalInputComponent
+                <SearchInputComponent
                   key={i}
                   item={x}
                   emptyModel={emptyModel}
@@ -255,16 +282,20 @@ const MyTable = ({ title, api, actions }) => {
                                     type="button"
                                     className="btn btn-light btn-sm"
                                     onClick={
-                                      action == "Edit"
-                                        ? () => handleEdit(item1)
-                                        : action == "Delete"
-                                        ? () => handleDelete(item1.id)
-                                        : console.log(
-                                            "Unknown action in the table"
-                                          )
+                                      typeof action == "string"
+                                        ? action == "Edit"
+                                          ? () => handleEdit(item1)
+                                          : action == "Delete"
+                                          ? () => handleDelete(item1.id)
+                                          : console.log(
+                                              "Unknown action in the table"
+                                            )
+                                        : () => action.callback(item1)
                                     }
                                   >
-                                    {action}
+                                    {typeof action == "string"
+                                      ? action
+                                      : action.name}
                                   </button>
                                 </div>
                               )
@@ -295,32 +326,33 @@ const MyTable = ({ title, api, actions }) => {
                       <i className="mdi mdi-chevron-left"></i>
                     </Link>
                   </li>
-                  {Array.from(
-                    {
-                      length:
-                        totalCount / searchModel.pageSize < 1
-                          ? 1
-                          : totalCount % searchModel.pageSize > 0
-                          ? totalCount / searchModel.pageSize + 1
-                          : totalCount / searchModel.pageSize,
-                    },
-                    (_, index) => index + 1
-                  ).map((x, i) => (
-                    <li
-                      key={i}
-                      className={`paginate_button page-item ${
-                        searchModel.page == x ? "active" : ""
-                      }`}
-                    >
-                      <Link
-                        to="#"
-                        className="page-link"
-                        onClick={() => handleSetPage(x)}
+                  {searchModel &&
+                    Array.from(
+                      {
+                        length:
+                          totalCount / searchModel.pageSize < 1
+                            ? 1
+                            : totalCount % searchModel.pageSize > 0
+                            ? totalCount / searchModel.pageSize + 1
+                            : totalCount / searchModel.pageSize,
+                      },
+                      (_, index) => index + 1
+                    ).map((x, i) => (
+                      <li
+                        key={i}
+                        className={`paginate_button page-item ${
+                          searchModel.page == x ? "active" : ""
+                        }`}
                       >
-                        {x}
-                      </Link>
-                    </li>
-                  ))}
+                        <Link
+                          to="#"
+                          className="page-link"
+                          onClick={() => handleSetPage(x)}
+                        >
+                          {x}
+                        </Link>
+                      </li>
+                    ))}
                   <li
                     className={`paginate_button page-item next ${
                       searchModel.page * searchModel.pageSize >= totalCount
