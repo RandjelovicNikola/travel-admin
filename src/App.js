@@ -22,7 +22,7 @@ import "./assets/scss/theme.scss"
 // import { initFirebaseBackend } from "./helpers/firebase_helper";
 
 import fakeBackend from "./helpers/AuthType/fakeBackend"
-import MyModal from "pages/_custom/Components/MyModal"
+import MyModal from "views/Components/MyModal"
 
 // Activating fake backend
 fakeBackend()
