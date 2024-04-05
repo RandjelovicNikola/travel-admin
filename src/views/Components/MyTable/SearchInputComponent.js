@@ -16,7 +16,7 @@ const SearchInputComponent = memo(({ item, emptyModel, handleInputChange }) => {
     value => {
       handleInputChange({
         key: item[0],
-        value: item[0] != value ? value : null,
+        value: value != "None" ? value : null,
       })
     },
     [item, handleInputChange]

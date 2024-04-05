@@ -7,7 +7,7 @@ import { toCapitalized } from "util/tools/tDisplay"
 import SearchInputComponent from "./SearchInputComponent"
 import { QueryToObject } from "util/tools/tUri"
 
-const MyTable = ({ title, api, actions }) => {
+const MyTable = ({ title, api, actions, selected }) => {
   const [isFirstFetch, setIsFirstFetch] = useState(true)
   const [data, setData] = useState()
   const [totalCount, setTotalCount] = useState(0)
@@ -86,20 +86,6 @@ const MyTable = ({ title, api, actions }) => {
       sortOrder:
         searchModel.sortOrder == 1 || searchModel.sortBy != sortBy ? 0 : 1,
       sortBy,
-    })
-  }
-
-  const handleLastPage = () => {
-    setSearchModel({
-      ...searchModel,
-      page: searchModel.page - 1,
-    })
-  }
-
-  const handleNextPage = () => {
-    setSearchModel({
-      ...searchModel,
-      page: searchModel.page + 1,
     })
   }
 
@@ -213,6 +199,7 @@ const MyTable = ({ title, api, actions }) => {
               ))}
             </div>
           )}
+
           <MySeparator gap={20} />
 
           <div className="table-responsive">
@@ -280,7 +267,12 @@ const MyTable = ({ title, api, actions }) => {
                                   )}
                                   <button
                                     type="button"
-                                    className="btn btn-light btn-sm"
+                                    className={`btn ${
+                                      action.name == "Select" &&
+                                      selected?.includes(item1.id)
+                                        ? "btn-primary"
+                                        : "btn-light"
+                                    } btn-sm`}
                                     onClick={
                                       typeof action == "string"
                                         ? action == "Edit"
@@ -322,7 +314,11 @@ const MyTable = ({ title, api, actions }) => {
                       searchModel.page <= 1 ? "disabled" : ""
                     }`}
                   >
-                    <Link to="#" className="page-link" onClick={handleLastPage}>
+                    <Link
+                      to="#"
+                      className="page-link"
+                      onClick={() => handleSetPage(searchModel.page - 1)}
+                    >
                       <i className="mdi mdi-chevron-left"></i>
                     </Link>
                   </li>
@@ -360,7 +356,11 @@ const MyTable = ({ title, api, actions }) => {
                         : ""
                     }`}
                   >
-                    <Link to="#" className="page-link" onClick={handleNextPage}>
+                    <Link
+                      to="#"
+                      className="page-link"
+                      onClick={() => handleSetPage(searchModel.page + 1)}
+                    >
                       <i className="mdi mdi-chevron-right"></i>
                     </Link>
                   </li>

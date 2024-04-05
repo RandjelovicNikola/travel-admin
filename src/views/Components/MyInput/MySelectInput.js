@@ -23,7 +23,7 @@ const MySelectInput = memo(
               handleChange(!isNaN(val) ? parseInt(val) : val)
             }}
           >
-            <option>{item[1] ?? item[0]}</option>
+            <option>None</option>
             {(!!data &&
               data.map((x, i) => (
                 <option key={i}>

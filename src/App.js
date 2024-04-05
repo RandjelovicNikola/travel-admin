@@ -23,6 +23,7 @@ import "./assets/scss/theme.scss"
 
 import fakeBackend from "./helpers/AuthType/fakeBackend"
 import MyModal from "views/Components/MyModal"
+import { UserProvider } from "util/providers/UserProvider"
 
 // Activating fake backend
 fakeBackend()
@@ -74,7 +75,11 @@ const App = () => {
         {publicRoutes.map((route, idx) => (
           <Route
             path={route.path}
-            element={<NonAuthLayout>{route.component}</NonAuthLayout>}
+            element={
+              <UserProvider>
+                <NonAuthLayout>{route.component}</NonAuthLayout>
+              </UserProvider>
+            }
             key={idx}
             exact={true}
           />
@@ -84,9 +89,11 @@ const App = () => {
           <Route
             path={route.path}
             element={
-              <Authmiddleware>
-                <Layout>{route.component}</Layout>
-              </Authmiddleware>
+              <UserProvider>
+                <Authmiddleware>
+                  <Layout>{route.component}</Layout>
+                </Authmiddleware>
+              </UserProvider>
             }
             key={idx}
             exact={true}

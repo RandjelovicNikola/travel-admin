@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 import {
   Row,
   Col,
@@ -10,11 +10,13 @@ import {
   Form,
 } from "reactstrap"
 
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 import profileImg from "../../../assets/images/profile-img.png"
 import logoImg from "../../../assets/images/logo.svg"
 import useAuthApi from "util/api/aAuth"
+import { setAxiosToken } from "util/api/base/aBase"
+import { UserContext } from "util/providers/UserProvider"
 
 const Register = props => {
   document.title = "Register | Skote - React Admin & Dashboard Template"
@@ -26,16 +28,18 @@ const Register = props => {
   const [error, setError] = useState()
 
   const api = useAuthApi()
+  const navigate = useNavigate()
+  const { setUser } = useContext(UserContext)
 
   const handleRegister = () => {
     api.signUp({ email, password: pass }).then(res => {
       if (res) {
         setAxiosToken(res.token)
+        setUser(res)
 
-        // TODO: remove usage
-        localStorage.setItem("authUser", true)
+        localStorage.setItem("authUser", JSON.stringify(`${res.token}`))
 
-        navigate("/dashboard")
+        navigate("/")
       }
     })
   }

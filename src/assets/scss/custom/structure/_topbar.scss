@@ -105,6 +105,8 @@
 
 .page-content {
     padding: calc(#{$header-height} + #{$grid-gutter-width}) calc(#{$grid-gutter-width} * 0.75) $footer-height calc(#{$grid-gutter-width} * 0.75);
+    height: calc(100vh - #{$header-height});
+    overflow: auto;
 }
 
 .header-item {
@@ -281,7 +283,9 @@ body[data-layout="horizontal"] {
     }
     .page-content {
         margin-top: $header-height;
+        height: calc(100vh - #{$header-height});
         padding: calc(55px + #{$grid-gutter-width}) calc(#{$grid-gutter-width} * 0.5) $footer-height calc(#{$grid-gutter-width} * 0.5);
+        overflow: auto;
     }    
 }
 
@@ -289,6 +293,7 @@ body[data-layout="horizontal"] {
     body[data-layout="horizontal"] {
         .page-content {
             margin-top: 15px;
+            height: calc(100vh - 15px);
         }    
     }
 }

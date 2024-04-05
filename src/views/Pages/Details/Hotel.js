@@ -10,20 +10,26 @@ import useImageApi from "util/api/aImage"
 import { ModalContext } from "util/providers/ModalProvider"
 import useHotelApi from "util/api/aHotel"
 import useRoomTemplateApi from "util/api/aRoomTemplate"
+import useRoomApi from "util/api/aRoom"
 
 const Hotel = () => {
   const [hotel, setHotel] = useState()
 
-  const [images, setImages] = useState([{}])
+  const [images, setImages] = useState([])
   const [imageEmptyModel, setImageEmptyModel] = useState(null)
 
-  const [templates, setTemplates] = useState([{}])
+  const [templates, setTemplates] = useState([])
   const [templateEmptyModel, setTemplateEmptyModel] = useState(null)
+  const [selectedTemplate, setSelectedTemplate] = useState(null)
+
+  const [rooms, setRooms] = useState([])
+  const [roomEmptyModel, setRoomEmptyModel] = useState(null)
 
   const { id } = useParams()
 
   const api = useHotelApi()
   const imageApi = useImageApi()
+  const roomApi = useRoomApi()
   const templateApi = useRoomTemplateApi()
 
   const {
@@ -32,25 +38,62 @@ const Hotel = () => {
     setModalType,
     openModal,
     refresh,
+    setModalIgnoredProps,
   } = useContext(ModalContext)
 
   const handleAddImage = () => {
     setModalEmptyModel(imageEmptyModel)
     setModalTitle(`Add Image`)
     setModalType("add")
+    setModalIgnoredProps([
+      "countryId",
+      "regionId",
+      "subRegionId",
+      "cityId",
+      "hotelId",
+      "roomTemplateId",
+      "roomId",
+      "userId",
+    ])
 
     var addData = {}
     Object.keys(imageEmptyModel).map((x, i) => {
       addData[x] = null
     })
 
-    openModal({ data: { ...addData, hotelId: id }, api: imageApi })
+    openModal({
+      data: {
+        ...addData,
+        hotelId: id,
+        path: "https://nikana.gr/images/2617/sinapis-studios-sarti-sithonia-3-bed-studio-1-.avif",
+      },
+      api: imageApi,
+    })
+  }
+
+  const handleEditImage = item => {
+    setModalEmptyModel(imageEmptyModel)
+    setModalTitle(`Edit Image`)
+    setModalType("edit")
+    setModalIgnoredProps([
+      "countryId",
+      "regionId",
+      "subRegionId",
+      "cityId",
+      "hotelId",
+      "roomTemplateId",
+      "roomId",
+      "userId",
+    ])
+
+    openModal({ data: item, api: imageApi })
   }
 
   const handleAddTemplate = () => {
     setModalEmptyModel(templateEmptyModel)
-    setModalTitle(`Add Image`)
+    setModalTitle(`Add Template`)
     setModalType("add")
+    setModalIgnoredProps(["summary", "descripition", "hotelId", "status"])
 
     var addData = {}
     Object.keys(templateEmptyModel).map((x, i) => {
@@ -64,9 +107,37 @@ const Hotel = () => {
     window.open(`/room-template/${template.id}`)
   }
 
+  const handleRoomDetailsClick = room => {
+    window.open(`/room/${room.id}`)
+  }
+
   const handleDeleteTemplate = id => {
+    setModalTitle(`Delete Template`)
     setModalType("delete")
     openModal({ data: id, api: templateApi })
+  }
+
+  const handleAddRoom = () => {
+    setModalEmptyModel(roomEmptyModel)
+    setModalTitle(`Add Room`)
+    setModalType("add")
+    setModalIgnoredProps(["status", "hotelId", "roomTemplateId"])
+
+    var addData = {}
+    Object.keys(roomEmptyModel).map((x, i) => {
+      addData[x] = null
+    })
+
+    openModal({
+      data: { ...addData, hotelId: id, roomTemplateId: selectedTemplate },
+      api: roomApi,
+    })
+  }
+
+  const handleDeleteRoom = id => {
+    setModalTitle(`Delete Room`)
+    setModalType("delete")
+    openModal({ data: id, api: roomApi })
   }
 
   var settings = {
@@ -81,31 +152,32 @@ const Hotel = () => {
 
   useEffect(() => {
     api.getById(id).then(res => setHotel(res))
-    imageApi.getAll({ hotelId: id }).then(res => {
+    imageApi.getAll({ hotelId: id, sortBy: "DisplayIndex" }).then(res => {
       setImageEmptyModel(res.emptyModel)
       setImages(res.list)
     })
-    templateApi.getAll({ hotelId: id }).then(res => {
+    templateApi.getAll({ hotelId: id, sortBy: "DisplayIndex" }).then(res => {
       setTemplateEmptyModel(res.emptyModel)
       setTemplates(res.list)
+    })
+    roomApi.getAll({ hotelId: id, sortBy: "DisplayIndex" }).then(res => {
+      setRoomEmptyModel(res.emptyModel)
+      setRooms(res.list)
     })
   }, [refresh])
 
   return (
     !!hotel && (
       <React.Fragment>
-        <div className="page-content">
+        <div className="page-content" style={{ overflow: "auto" }}>
           <div
             style={{
               display: "flex",
-              flexDirection: "row",
               justifyContent: "space-between",
               alignItems: "center",
             }}
           >
-            <h5>
-              {hotel.name} {hotel.lastName}
-            </h5>
+            <h1>{hotel.name}</h1>
             <button className="btn btn-primary btn-md" onClick={handleAddImage}>
               Add Image
             </button>
@@ -113,25 +185,49 @@ const Hotel = () => {
 
           <MySeparator />
 
-          <div style={{ height: 350 }}>
-            <Slider {...settings}>
-              {images.map((x, i) => (
-                <div key={i}>
-                  <img
-                    src={x.path}
-                    style={{
-                      borderRadius: "10px",
-                      height: 350,
-                      aspectRatio: "auto",
-                      marginRight: 10,
-                    }}
-                  />
+          <div>
+            {images.length > 0 ? (
+              <Slider {...settings}>
+                {images.map((x, i) => (
+                  <div key={i} style={{ opacity: "0" }}>
+                    <img
+                      src={x.path}
+                      style={{
+                        borderRadius: 10,
+                        height: "25vh",
+                        aspectRatio: "auto",
+                        marginRight: 10,
+                        cursor: "pointer",
+                      }}
+                      onClick={() => handleEditImage(x)}
+                    />
+                  </div>
+                ))}
+              </Slider>
+            ) : (
+              <div>
+                <div
+                  style={{
+                    height: "25vh",
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    borderColor: "#a6b0cf",
+                    borderWidth: 2,
+                    borderStyle: "dashed",
+                    borderRadius: 10,
+                    cursor: "pointer",
+                  }}
+                  onClick={handleAddImage}
+                >
+                  <i className="bx bx-image-add" style={{ fontSize: 50 }} />
                 </div>
-              ))}
-            </Slider>
+              </div>
+            )}
           </div>
 
-          <MySeparator />
+          <MySeparator gap={20} />
 
           <Card style={{ borderRadius: 10 }}>
             <CardBody>
@@ -142,97 +238,206 @@ const Hotel = () => {
                   alignItems: "center",
                 }}
               >
-                <CardTitle className="mt-0">Room Templates</CardTitle>
+                <text style={{ color: "white" }}>Configure room types</text>
+
+                <MySeparator gap={20} ver={false} />
+
                 <button
                   className="btn btn-primary btn-md"
                   onClick={handleAddTemplate}
                 >
-                  Add Template
+                  Add Type
                 </button>
               </div>
 
-              <MySeparator />
+              <MySeparator gap={20} />
 
-              <div
-                style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  columnGap: 10,
-                }}
-              >
-                {!!templates &&
-                  templates.map((x, xi) => (
-                    <div
-                      key={xi}
-                      style={{
-                        width: "calc(25% - 7.5px)",
-                        aspectRatio: 1 / 1,
-                        borderRadius: 10,
-                        backgroundColor: "#222736",
-                        padding: 20,
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "space-between",
-                        marginTop: 10,
-                      }}
-                    >
-                      <div>
-                        <h5>{x.name}</h5>
-                        <div>
-                          {"Adults"}: {x.adultCount}
+              {templates.length > 0 ? (
+                <Slider {...settings}>
+                  {templates.map((x, xi) => (
+                    <div key={xi}>
+                      <div
+                        style={{
+                          minWidth: 250,
+                          borderRadius: 10,
+                          backgroundColor: "#222736",
+                          padding: 15,
+                          display: "flex",
+                          flexDirection: "column",
+                          rowGap: 10,
+                          marginRight: 10,
+                        }}
+                      >
+                        <div style={{ color: "white" }}>
+                          <h5>{x.name}</h5>
+                          <div>
+                            {"Adults"}: {x.adultCount}
+                          </div>
+                          <div>
+                            {"Children"}: {x.childCount}
+                          </div>
+                          <div>
+                            {"Active"}: {x.active ? x.active.toString() : false}
+                          </div>
                         </div>
-                        <div>
-                          {"Children"}: {x.childCount}
-                        </div>
-                        <div>
-                          {"Separate rooms"}: {x.roomCount}
-                        </div>
-                        <div>
-                          {"Active"}: {x.active ? x.active.toString() : false}
-                        </div>
-                      </div>
 
-                      <div style={{ fontSize: 15 }}>
-                        Number of rooms:{" "}
-                        <button style={{ width: 30 }}>
-                          <i className="mdi mdi-chevron-left"></i>
-                        </button>
-                        <span
-                          style={{
-                            fontSize: 20,
-                            color: "white",
-                            marginInline: 10,
-                          }}
-                        >
-                          5
-                        </span>
-                        <button style={{ width: 30 }}>
-                          <i className="mdi mdi-chevron-right"></i>
-                        </button>
-                      </div>
-
-                      <div style={{ display: "flex" }}>
-                        <button
-                          style={{ width: "50%" }}
-                          className="btn btn-danger btn-sm"
-                          onClick={() => handleDeleteTemplate(x.id)}
-                        >
-                          Remove
-                        </button>
-                        <MySeparator ver={false} />
-                        <button
-                          style={{ width: "50%" }}
-                          className="btn btn-primary btn-sm"
-                          onClick={() => handleTemplateDetailsClick(x)}
-                        >
-                          Details
-                        </button>
+                        <div>
+                          <div style={{ display: "flex" }}>
+                            <button
+                              style={{ width: "50%" }}
+                              className="btn btn-danger btn-sm"
+                              onClick={() => handleDeleteTemplate(x.id)}
+                            >
+                              Remove
+                            </button>
+                            <MySeparator ver={false} />
+                            <button
+                              style={{ width: "50%" }}
+                              className="btn btn-primary btn-sm"
+                              onClick={() => handleTemplateDetailsClick(x)}
+                            >
+                              Details
+                            </button>
+                          </div>
+                          <MySeparator />
+                          <button
+                            style={{ width: "100%" }}
+                            className={`btn ${
+                              selectedTemplate == x.id
+                                ? "btn-primary"
+                                : "btn-light"
+                            } btn-sm`}
+                            onClick={() => setSelectedTemplate(x.id)}
+                          >
+                            Select
+                          </button>
+                        </div>
                       </div>
                     </div>
                   ))}
-              </div>
+                </Slider>
+              ) : (
+                <div>
+                  <div
+                    style={{
+                      height: "20vh",
+                      width: "100%",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      borderColor: "#a6b0cf",
+                      borderWidth: 2,
+                      borderStyle: "dashed",
+                      borderRadius: 10,
+                      cursor: "pointer",
+                    }}
+                    onClick={handleAddTemplate}
+                  >
+                    <i className="bx bx-image-add" style={{ fontSize: 50 }} />
+                  </div>
+                </div>
+              )}
             </CardBody>
           </Card>
+
+          {templates.length > 0 && selectedTemplate && (
+            <Card style={{ borderRadius: 10 }}>
+              <CardBody>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  <text style={{ color: "white" }}>Configure rooms</text>
+
+                  <MySeparator gap={20} ver={false} />
+
+                  <button
+                    className="btn btn-primary btn-md"
+                    onClick={handleAddRoom}
+                  >
+                    Add Room
+                  </button>
+                </div>
+
+                <MySeparator gap={20} />
+
+                {rooms.length > 0 ? (
+                  <Slider {...settings}>
+                    {rooms
+                      .filter(x => x.roomTemplateId == selectedTemplate)
+                      .map((x, xi) => (
+                        <div key={xi}>
+                          <div
+                            style={{
+                              minWidth: 250,
+                              borderRadius: 10,
+                              backgroundColor: "#222736",
+                              padding: 15,
+                              display: "flex",
+                              flexDirection: "column",
+                              rowGap: 10,
+                              marginRight: 10,
+                            }}
+                          >
+                            <div style={{ color: "white" }}>
+                              <h5>{x.roomTag ?? `Room ${xi}`}</h5>
+                              <div>
+                                {"Status"}: {x.status}
+                              </div>
+                              <div>
+                                {"Active"}:{" "}
+                                {x.active ? x.active.toString() : false}
+                              </div>
+                            </div>
+
+                            <div style={{ display: "flex" }}>
+                              <button
+                                style={{ width: "50%" }}
+                                className="btn btn-danger btn-sm"
+                                onClick={() => handleDeleteRoom(x.id)}
+                              >
+                                Remove
+                              </button>
+                              <MySeparator ver={false} />
+                              <button
+                                style={{ width: "50%" }}
+                                className="btn btn-primary btn-sm"
+                                onClick={() => handleRoomDetailsClick(x)}
+                              >
+                                Details
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                  </Slider>
+                ) : (
+                  <div>
+                    <div
+                      style={{
+                        height: "20vh",
+                        width: "100%",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        borderColor: "#a6b0cf",
+                        borderWidth: 2,
+                        borderStyle: "dashed",
+                        borderRadius: 10,
+                        cursor: "pointer",
+                      }}
+                      onClick={handleAddRoom}
+                    >
+                      <i className="bx bx-image-add" style={{ fontSize: 50 }} />
+                    </div>
+                  </div>
+                )}
+              </CardBody>
+            </Card>
+          )}
         </div>
       </React.Fragment>
     )

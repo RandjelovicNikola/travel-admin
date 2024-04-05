@@ -10,6 +10,7 @@ export const ModalProvider = ({ children }) => {
   const [modalApi, setModalApi] = useState(null)
   const [modalEmptyModel, setModalEmptyModel] = useState(null)
   const [refresh, setRefresh] = useState(false)
+  const [modalIgnoredProps, setModalIgnoredProps] = useState([])
 
   const toggleRefresh = () => {
     setRefresh(!refresh)
@@ -25,6 +26,9 @@ export const ModalProvider = ({ children }) => {
     setIsModalOpen(false)
     setModalApi(null)
     setModalData("")
+    setTimeout(() => {
+      setModalIgnoredProps([])
+    }, 1000)
   }
 
   return (
@@ -39,12 +43,14 @@ export const ModalProvider = ({ children }) => {
         setModalData,
         toggleRefresh,
         modalEmptyModel,
+        modalIgnoredProps,
 
         openModal,
         setModalType,
         setModalTitle,
         refresh,
         setModalEmptyModel,
+        setModalIgnoredProps,
       }}
     >
       {children}

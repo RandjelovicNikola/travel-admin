@@ -11,6 +11,7 @@ const SaveModalBody = memo(() => {
     toggleRefresh,
     modalEmptyModel,
     modalType,
+    modalIgnoredProps,
   } = useContext(ModalContext)
 
   const handleSave = useCallback(() => {
@@ -37,7 +38,11 @@ const SaveModalBody = memo(() => {
     <div className="modal-body">
       {!!modalEmptyModel &&
         Object.entries(modalEmptyModel)
-          .filter(x => modalType == "edit" || x[0] != "id")
+          .filter(
+            x =>
+              (modalType == "edit" || x[0] != "id") &&
+              !modalIgnoredProps.includes(x[0])
+          )
           .map((x, i) => (
             <ModalInputComponent
               key={i}

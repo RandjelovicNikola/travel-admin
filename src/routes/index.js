@@ -195,6 +195,12 @@ import RoomFeatureCategoryTable from "views/Pages/Tables/RoomFeatureCategoryTabl
 import RoomTemplateTable from "views/Pages/Tables/RoomTemplateTable"
 import SubRegionTable from "views/Pages/Tables/SubRegionTable"
 import UserTable from "views/Pages/Tables/UserTable"
+import RolePermissionTable from "views/Pages/Tables/Connections/RolePermissionTable"
+import MainPage from "views/Pages/Flow/MainPage"
+import HotelList from "views/Pages/Flow/HotelList"
+import Room from "views/Pages/Details/Room"
+import RoomTemplate from "views/Pages/Details/RoomTemplate"
+import PriceAdjustmentTable from "views/Pages/Tables/PriceAdjustmentTable"
 
 const authProtectedRoutes = [
   { path: "/hotel", component: <Hotel /> },
@@ -205,25 +211,30 @@ const authProtectedRoutes = [
   { path: "/countries", component: <CountryTable /> },
   { path: "/faqs", component: <FAQTable /> },
   { path: "/hotels", component: <HotelTable /> },
+  { path: "/hotel-list", component: <HotelList /> },
   { path: "/hotel/:id", component: <Hotel /> },
   { path: "/hotel-features", component: <HotelFeatureTable /> },
   {
     path: "/hotel-feature-categories",
     component: <HotelFeatureCategoryTable />,
   },
+  { path: "/price-adjustments", component: <PriceAdjustmentTable /> },
   { path: "/images", component: <ImageTable /> },
   { path: "/permissions", component: <PermissionTable /> },
   { path: "/pricings", component: <PricingTable /> },
   { path: "/regions", component: <RegionTable /> },
   { path: "/recensions", component: <RecensionTable /> },
   { path: "/reservations", component: <ReservationTable /> },
-  { path: "/roles", component: <RoleTable /> },
+  { path: "/room/:id", component: <Room /> },
   { path: "/rooms", component: <RoomTable /> },
   { path: "/room-features", component: <RoomFeatureTable /> },
   { path: "/room-feature-categories", component: <RoomFeatureCategoryTable /> },
+  { path: "/room-template/:id", component: <RoomTemplate /> },
   { path: "/room-templates", component: <RoomTemplateTable /> },
   { path: "/sub-regions", component: <SubRegionTable /> },
   { path: "/users", component: <UserTable /> },
+
+  { path: "/roles", component: <RolePermissionTable /> },
 
   { path: "/dashboard", component: <Dashboard /> },
   { path: "/dashboard-saas", component: <DashboardSaas /> },
@@ -373,10 +384,10 @@ const authProtectedRoutes = [
   // this route should be at the end of all other routes
   // eslint-disable-next-line react/display-name
   {
-    path: "/",
-    exact: true,
+    path: "/dashboard",
     component: <Navigate to="/dashboard" />,
   },
+  { path: "/", exact: true, component: <MainPage /> },
 ]
 
 const publicRoutes = [

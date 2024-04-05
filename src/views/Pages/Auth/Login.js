@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 
 import {
   Row,
@@ -20,6 +20,7 @@ import profile from "assets/images/profile-img.png"
 import logo from "assets/images/logo.svg"
 import useAuthApi from "util/api/aAuth"
 import { setAxiosToken } from "util/api/base/aBase"
+import { UserContext } from "util/providers/UserProvider"
 
 const Login = props => {
   const [email, setEmail] = useState()
@@ -29,16 +30,17 @@ const Login = props => {
 
   const api = useAuthApi()
   const navigate = useNavigate()
+  const { setUser } = useContext(UserContext)
 
   const handleLogin = () => {
     api.signIn({ email, password: pass }).then(res => {
       if (res) {
         setAxiosToken(res.token)
+        setUser(res)
 
-        // TODO: remove usage
-        localStorage.setItem("authUser", true)
+        localStorage.setItem("authUser", JSON.stringify(`${res.token}`))
 
-        navigate("/dashboard")
+        navigate("/")
       }
     })
   }
@@ -110,7 +112,7 @@ const Login = props => {
                         />
                       </div>
 
-                      <div className="form-check">
+                      {/* <div className="form-check">
                         <input
                           type="checkbox"
                           className="form-check-input"
@@ -124,7 +126,7 @@ const Login = props => {
                         >
                           Remember me
                         </label>
-                      </div>
+                      </div> */}
 
                       <div className="mt-3 d-grid">
                         <button

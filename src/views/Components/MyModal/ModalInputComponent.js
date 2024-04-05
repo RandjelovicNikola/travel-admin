@@ -17,7 +17,7 @@ const ModalInputComponent = memo(
       value => {
         handleInputChange({
           key: item[0],
-          value: item[0] != value ? value : null,
+          value: value != "None" ? value : null,
         })
       },
       [item, handleInputChange]
@@ -102,50 +102,6 @@ const ModalInputComponent = memo(
   }
 )
 
-const MyModalSelectInput = memo(({ controller, handleChange, enumName }) => {
-  const [data, setData] = useState(null)
-
-  const api = useApi(!enumName ? controller : "common/enum")
-
-  const handleChangeLocal = val => {
-    if (val) {
-      var id = val.slice(
-        val.indexOf("(") + 1,
-        val.indexOf(")", val.indexOf("("))
-      )
-
-      handleChange(id)
-    }
-  }
-
-  useEffect(() => {
-    api
-      .getAll(!enumName ? {} : { name: enumName })
-      .then(res => setData(res.list))
-  }, [])
-
-  return (
-    <Row className="mb-3">
-      <label className="col-md-3 col-form-label">{controller}</label>
-
-      <div className="col-md-9">
-        <select
-          className={"form-select"}
-          onChange={e => handleChangeLocal(e.target.value)}
-        >
-          {(!!data &&
-            data.map((x, i) => (
-              <option key={i}>
-                {x.name} ({x.id})
-              </option>
-            ))) || <option>No items</option>}
-        </select>
-      </div>
-    </Row>
-  )
-})
-
 ModalInputComponent.displayName = "ModalInputComponent"
-MyModalSelectInput.displayName = "MyModalSelectInput"
 
 export default ModalInputComponent

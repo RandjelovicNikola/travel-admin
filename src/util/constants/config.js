@@ -1,3 +1,3 @@
 export default {
-  baseUrl: "https://localhost:7192/api/",
+  baseUrl: "https://travelapi.takitez.net/api/",
 }
