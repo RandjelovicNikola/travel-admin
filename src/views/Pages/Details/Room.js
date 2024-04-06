@@ -9,8 +9,10 @@ import useRoomFeatureCategoryApi from "util/api/aRoomFeatureCategory"
 import useRoomFeatureRoomApi from "util/api/aRoomFeatureRoom"
 import { ModalContext } from "util/providers/ModalProvider"
 import MySeparator from "views/Common/MySeparator"
+import RoomFeaturesComp from "views/Components/PageComponents/RoomFeaturesComp"
 
 const Room = () => {
+  const { id } = useParams()
   const [room, setRoom] = useState()
 
   const [images, setImages] = useState([])
@@ -21,8 +23,6 @@ const Room = () => {
   const [roomFeatureConnection, setRoomFeatureConnection] = useState(null)
 
   const [localRefresh, setLocalRefresh] = useState(false)
-
-  const { id } = useParams()
 
   const api = useRoomApi()
   const imageApi = useImageApi()
@@ -65,7 +65,7 @@ const Room = () => {
         hotelId: room?.hotelId,
         roomTemplateId: room?.roomTemplateId,
         roomId: id,
-        path: "https://nikana.gr/images/2617/sinapis-studios-sarti-sithonia-3-bed-studio-1-.avif",
+        path: "https://nikana.gr/images/3225/althea-luxury-houses-ag-nikitas-lefkada-15.avif",
       },
       api: imageApi,
     })
@@ -86,12 +86,6 @@ const Room = () => {
     ])
 
     openModal({ data: item, api: imageApi })
-  }
-
-  const toggleFeature = feature => {
-    roomFeatureConnectionApi
-      .toggleFeature({ roomId: id, roomFeatureId: feature.id })
-      .then(() => setLocalRefresh(!localRefresh))
   }
 
   var settings = {
@@ -186,77 +180,11 @@ const Room = () => {
 
           <MySeparator gap={20} />
 
-          <Card style={{ borderRadius: 10 }}>
-            <CardBody>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}
-              >
-                <h5 style={{ color: "white" }}>
-                  What does this specific room offer?
-                </h5>
-              </div>
-
-              <MySeparator gap={20} />
-
-              {featureCategories &&
-                featureCategories.map((x, i) => (
-                  <div key={i} style={{ height: "100%", width: "100" }}>
-                    {x.name}
-
-                    <MySeparator />
-
-                    <div
-                      style={{
-                        display: "flex",
-                        flexWrap: "wrap",
-                        columnGap: 10,
-                      }}
-                    >
-                      {features &&
-                        roomFeatureConnection &&
-                        features
-                          .filter(y => y.roomFeatureCategoryId == x.id)
-                          .map((y, i) => (
-                            <div
-                              key={i}
-                              style={{
-                                height: 30,
-                                width: 200,
-                                display: "flex",
-                                alignItems: "center",
-                                color: "white",
-                              }}
-                            >
-                              <div className="form-check form-switch form-switch-md mb-3">
-                                <input
-                                  type="checkbox"
-                                  className="form-check-input"
-                                  id={`customSwitchsizemd_${i}_${y.id}`}
-                                  checked={roomFeatureConnection?.some(
-                                    z => z.roomFeatureId == y.id
-                                  )}
-                                  onClick={() => toggleFeature(y)}
-                                />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor={`customSwitchsizemd_${i}_${y.id}`}
-                                >
-                                  {y.name}
-                                </label>
-                              </div>
-                            </div>
-                          ))}
-                    </div>
-
-                    <MySeparator gap={30} />
-                  </div>
-                ))}
-            </CardBody>
-          </Card>
+          <RoomFeaturesComp
+            connectionType={1}
+            templateId={room.roomTemplateId}
+            roomId={id}
+          />
         </div>
       </React.Fragment>
     )

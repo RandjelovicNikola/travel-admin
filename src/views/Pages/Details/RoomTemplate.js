@@ -10,8 +10,10 @@ import useRoomTemplateApi from "util/api/aRoomTemplate"
 import { ModalContext } from "util/providers/ModalProvider"
 import MySeparator from "views/Common/MySeparator"
 import MyNumberInput from "views/Components/MyInput/MyNumberInput"
+import RoomFeaturesComp from "views/Components/PageComponents/RoomFeaturesComp"
 
 const RoomTemplate = () => {
+  const { id } = useParams()
   const [template, setTemplate] = useState()
   const [priceAdjustments, setPriceAdjustments] = useState([])
 
@@ -24,8 +26,6 @@ const RoomTemplate = () => {
     useState(null)
 
   const [localRefresh, setLocalRefresh] = useState(false)
-
-  const { id } = useParams()
 
   const api = useRoomTemplateApi()
   const imageApi = useImageApi()
@@ -66,7 +66,7 @@ const RoomTemplate = () => {
         ...addData,
         hotelId: template?.hotelId,
         roomTemplateId: id,
-        path: "https://nikana.gr/images/2617/sinapis-studios-sarti-sithonia-3-bed-studio-1-.avif",
+        path: "https://nikana.gr/images/3225/althea-luxury-houses-ag-nikitas-lefkada-13.avif",
       },
       api: imageApi,
     })
@@ -248,69 +248,7 @@ const RoomTemplate = () => {
             </Card>
           )}
 
-          <Card style={{ borderRadius: 10 }}>
-            <CardBody>
-              <h5 style={{ color: "white" }}>
-                What does this specific room offer?
-              </h5>
-
-              <MySeparator />
-
-              {featureCategories &&
-                featureCategories.map((x, i) => (
-                  <div key={i} style={{ height: "100%", width: "100" }}>
-                    {x.name}
-
-                    <MySeparator />
-
-                    <div
-                      style={{
-                        display: "flex",
-                        flexWrap: "wrap",
-                        columnGap: 10,
-                      }}
-                    >
-                      {features &&
-                        roomTemplateFeatureConnection &&
-                        features
-                          .filter(y => y.roomFeatureCategoryId == x.id)
-                          .map((y, i) => (
-                            <div
-                              key={i}
-                              style={{
-                                height: 30,
-                                width: 200,
-                                display: "flex",
-                                alignItems: "center",
-                                color: "white",
-                              }}
-                            >
-                              <div className="form-check form-switch form-switch-md mb-3">
-                                <input
-                                  type="checkbox"
-                                  className="form-check-input"
-                                  id={`customSwitchsizemd_${i}_${y.id}`}
-                                  checked={roomTemplateFeatureConnection?.some(
-                                    z => z.roomFeatureId == y.id
-                                  )}
-                                  onClick={() => toggleFeature(y)}
-                                />
-                                <label
-                                  className="form-check-label"
-                                  htmlFor={`customSwitchsizemd_${i}_${y.id}`}
-                                >
-                                  {y.name}
-                                </label>
-                              </div>
-                            </div>
-                          ))}
-                    </div>
-
-                    <MySeparator gap={20} />
-                  </div>
-                ))}
-            </CardBody>
-          </Card>
+          <RoomFeaturesComp connectionType={2} templateId={id} />
         </div>
       </React.Fragment>
     )

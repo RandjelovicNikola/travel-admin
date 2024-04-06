@@ -3,6 +3,7 @@ import { Row } from "reactstrap"
 
 const MyCheckboxInput = memo(({ item, handleChange }) => {
   const random = Math.random()
+  console.log(item)
   return (
     <Row className="mb-3">
       <label className="col-md-3 form-check-label" htmlFor={random}>

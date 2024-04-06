@@ -7,6 +7,7 @@ import MyCheckboxInput from "../MyInput/MyCheckboxInput"
 import MySelectInput from "../MyInput/MySelectInput"
 import Enums from "util/constants/enums"
 import MyDateInput from "../MyInput/MyDateInput"
+import MyBase64Input from "../MyInput/MyBase64Input"
 
 const ModalInputComponent = memo(
   ({ item, emptyModel, handleInputChange, disabled }) => {
@@ -40,7 +41,7 @@ const ModalInputComponent = memo(
         })
       }
     }, [])
-
+    console.log(item)
     if (isEnum || item[0]?.endsWith("Id")) {
       return (
         <MySelectInput
@@ -52,6 +53,8 @@ const ModalInputComponent = memo(
           inModal={true}
         />
       )
+    } else if (item[0] == "base64String") {
+      return <MyBase64Input item={item} handleChange={handleChange} />
     } else {
       switch (emptyModel[item[0]]) {
         case "string":
