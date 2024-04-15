@@ -59,7 +59,7 @@ const RoomFeaturesComp = ({ templateId, roomId }) => {
       .getAll({ roomTemplateId: templateId, pageSize: 1000 })
       .then(res => setRoomTemplateConns(res.list))
 
-    if (!!roomId == 1) {
+    if (isForRoom) {
       roomConnectionApi
         .getAll({ roomId: roomId, pageSize: 1000 })
         .then(res => setRoomConns(res.list))

@@ -28,7 +28,7 @@ export const ModalProvider = ({ children }) => {
     setModalData("")
     setTimeout(() => {
       setModalIgnoredProps([])
-    }, 1000)
+    }, 200)
   }
 
   return (

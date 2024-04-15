@@ -7,28 +7,23 @@ import useRoomApi from "util/api/aRoom"
 import useRoomFeatureApi from "util/api/aRoomFeature"
 import useRoomFeatureCategoryApi from "util/api/aRoomFeatureCategory"
 import useRoomFeatureRoomApi from "util/api/aRoomFeatureRoom"
+import useRoomTemplateApi from "util/api/aRoomTemplate"
 import { ModalContext } from "util/providers/ModalProvider"
 import MySeparator from "views/Common/MySeparator"
+import PriceAdjComp from "views/Components/PageComponents/PriceAdjComp"
 import RoomFeaturesComp from "views/Components/PageComponents/RoomFeaturesComp"
 
 const Room = () => {
   const { id } = useParams()
   const [room, setRoom] = useState()
+  const [template, setTemplate] = useState()
 
   const [images, setImages] = useState([])
   const [imageEmptyModel, setImageEmptyModel] = useState(null)
 
-  const [features, setFeatures] = useState(null)
-  const [featureCategories, setFeatureCategories] = useState(null)
-  const [roomFeatureConnection, setRoomFeatureConnection] = useState(null)
-
-  const [localRefresh, setLocalRefresh] = useState(false)
-
   const api = useRoomApi()
+  const templateApi = useRoomTemplateApi()
   const imageApi = useImageApi()
-  const featureApi = useRoomFeatureApi()
-  const featureCategoryApi = useRoomFeatureCategoryApi()
-  const roomFeatureConnectionApi = useRoomFeatureRoomApi()
 
   const {
     setModalEmptyModel,
@@ -99,23 +94,18 @@ const Room = () => {
   }
 
   useEffect(() => {
-    api.getById(id).then(res => setRoom(res))
+    api.getById(id).then(room => {
+      setRoom(room)
+
+      templateApi
+        .getById(room.roomTemplateId)
+        .then(template => setTemplate(template))
+    })
     imageApi.getAll({ roomId: id, sortBy: "DisplayIndex" }).then(res => {
       setImageEmptyModel(res.emptyModel)
       setImages(res.list)
     })
-    featureApi.getAll({ pageSize: 1000 }).then(res => {
-      setFeatures(res.list)
-    })
-    featureCategoryApi.getAll({ pageSize: 1000 }).then(res => {
-      setFeatureCategories(res.list)
-    })
-    roomFeatureConnectionApi
-      .getAll({ pageSize: 1000, roomId: id })
-      .then(res => {
-        setRoomFeatureConnection(res.list)
-      })
-  }, [refresh, localRefresh])
+  }, [refresh])
 
   return (
     !!room && (
@@ -179,6 +169,10 @@ const Room = () => {
           </div>
 
           <MySeparator gap={20} />
+
+          {template && (
+            <PriceAdjComp roomId={id} adultCount={template.adultCount} />
+          )}
 
           <RoomFeaturesComp
             connectionType={1}

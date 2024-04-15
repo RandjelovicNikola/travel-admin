@@ -197,7 +197,6 @@ import SubRegionTable from "views/Pages/Tables/SubRegionTable"
 import UserTable from "views/Pages/Tables/UserTable"
 import RolePermissionTable from "views/Pages/Tables/Connections/RolePermissionTable"
 import MainPage from "views/Pages/Flow/MainPage"
-import HotelList from "views/Pages/Flow/HotelList"
 import Room from "views/Pages/Details/Room"
 import RoomTemplate from "views/Pages/Details/RoomTemplate"
 import PriceAdjustmentTable from "views/Pages/Tables/PriceAdjustmentTable"
@@ -211,7 +210,6 @@ const authProtectedRoutes = [
   { path: "/countries", component: <CountryTable /> },
   { path: "/faqs", component: <FAQTable /> },
   { path: "/hotels", component: <HotelTable /> },
-  { path: "/hotel-list", component: <HotelList /> },
   { path: "/hotel/:id", component: <Hotel /> },
   { path: "/hotel-features", component: <HotelFeatureTable /> },
   {

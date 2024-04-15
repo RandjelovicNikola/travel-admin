@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import Slider from "react-slick"
-import { Card, CardBody } from "reactstrap"
 import useImageApi from "util/api/aImage"
 import useRoomFeatureApi from "util/api/aRoomFeature"
 import useRoomFeatureCategoryApi from "util/api/aRoomFeatureCategory"
@@ -9,7 +8,7 @@ import useRoomFeatureRoomTemplateApi from "util/api/aRoomFeatureRoomTemplate"
 import useRoomTemplateApi from "util/api/aRoomTemplate"
 import { ModalContext } from "util/providers/ModalProvider"
 import MySeparator from "views/Common/MySeparator"
-import MyNumberInput from "views/Components/MyInput/MyNumberInput"
+import PriceAdjComp from "views/Components/PageComponents/PriceAdjComp"
 import RoomFeaturesComp from "views/Components/PageComponents/RoomFeaturesComp"
 
 const RoomTemplate = () => {
@@ -84,27 +83,10 @@ const RoomTemplate = () => {
       "hotelId",
       "roomId",
       "userId",
+      "roomTemplateId",
     ])
 
     openModal({ data: item, api: imageApi })
-  }
-
-  const toggleFeature = feature => {
-    roomTemplateFeatureConnectionApi
-      .toggleFeature({ roomTemplateId: id, roomFeatureId: feature.id })
-      .then(() => setLocalRefresh(!localRefresh))
-  }
-
-  const handleChangePriceAdj = ({ innerArrayIndex, item, val }) => {
-    setPriceAdjustments(currentData =>
-      currentData.map((innerArray, index) =>
-        index === innerArrayIndex
-          ? innerArray.map(price =>
-              price[0] === item ? { ...price, value: val } : price
-            )
-          : innerArray
-      )
-    )
   }
 
   var settings = {
@@ -208,47 +190,9 @@ const RoomTemplate = () => {
           </div>
           <MySeparator gap={20} />
 
-          {template && (
-            <Card style={{ borderRadius: 10 }}>
-              <CardBody>
-                <h5 style={{ color: "white" }}>
-                  Do you offer better prices for less people? {"(-%)"}
-                </h5>
+          <PriceAdjComp templateId={id} adultCount={template.adultCount} />
 
-                <MySeparator gap={20} />
-
-                <div>
-                  {priceAdjustments &&
-                    priceAdjustments
-                      .sort((a, b) => b - a)
-                      .map((x, i) => (
-                        <div
-                          key={i}
-                          style={{
-                            height: 50,
-                            width: "70%",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            color: "white",
-                          }}
-                        >
-                          <MyNumberInput
-                            item={x}
-                            inModal={true}
-                            expand={false}
-                            handleChange={e =>
-                              handleChangePriceAdj({ item: x, val: e })
-                            }
-                          />
-                        </div>
-                      ))}
-                </div>
-              </CardBody>
-            </Card>
-          )}
-
-          <RoomFeaturesComp connectionType={2} templateId={id} />
+          <RoomFeaturesComp templateId={id} />
         </div>
       </React.Fragment>
     )
