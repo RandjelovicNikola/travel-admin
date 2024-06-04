@@ -7,7 +7,7 @@ import Breadcrumbs from "../../components/Common/Breadcrumb"
 
 const IconBoxicons = () => {
   //meta title
-  document.title = "Boxicons | Skote - React Admin & Dashboard Template";
+  document.title = "Boxicons | Skote - React Admin & Dashboard Template"
 
   return (
     <React.Fragment>
@@ -19,7 +19,10 @@ const IconBoxicons = () => {
               <Card>
                 <CardBody>
                   <CardTitle className="h4">Examples</CardTitle>
-                  <p className="card-subtitle mb-4">Use class <code>&lt;i className="bx bx-**"&quot;&gt;&lt;/i&gt;</code></p>
+                  <p className="card-subtitle mb-4">
+                    Use class{" "}
+                    <code>&lt;i className="bx bx-**"&quot;&gt;&lt;/i&gt;</code>
+                  </p>
 
                   <h5>Regular</h5>
                   <Row className="icon-demo-content">
@@ -27,7 +30,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-sticker"></i> bx bx-sticker
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-shield-quarter"></i> bx bx-shield-quarter
+                      <i className="bx bx-shield-quarter"></i> bx
+                      bx-shield-quarter
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-upside-down"></i> bx bx-upside-down
@@ -39,7 +43,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-meh-blank"></i> bx bx-meh-blank
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-happy-beaming"></i> bx bx-happy-beaming
+                      <i className="bx bx-happy-beaming"></i> bx
+                      bx-happy-beaming
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-shocked"></i> bx bx-shocked
@@ -57,7 +62,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-dizzy"></i> bx bx-dizzy
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-happy-heart-eyes"></i> bx bx-happy-heart-eyes
+                      <i className="bx bx-happy-heart-eyes"></i> bx
+                      bx-happy-heart-eyes
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-angry"></i> bx bx-angry
@@ -171,7 +177,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-add-to-queue"></i> bx bx-add-to-queue
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-border-radius"></i> bx bx-border-radius
+                      <i className="bx bx-border-radius"></i> bx
+                      bx-border-radius
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-check-shield"></i> bx bx-check-shield
@@ -213,28 +220,33 @@ const IconBoxicons = () => {
                       <i className="bx bx-brush-alt"></i> bx bx-brush-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-briefcase-alt-2"></i> bx bx-briefcase-alt-2
+                      <i className="bx bx-briefcase-alt-2"></i> bx
+                      bx-briefcase-alt-2
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-time-five"></i> bx bx-time-five
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-pie-chart-alt-2"></i> bx bx-pie-chart-alt-2
+                      <i className="bx bx-pie-chart-alt-2"></i> bx
+                      bx-pie-chart-alt-2
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-gas-pump"></i> bx bx-gas-pump
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-mobile-vibration"></i> bx bx-mobile-vibration
+                      <i className="bx bx-mobile-vibration"></i> bx
+                      bx-mobile-vibration
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-mobile-landscape"></i> bx bx-mobile-landscape
+                      <i className="bx bx-mobile-landscape"></i> bx
+                      bx-mobile-landscape
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-border-all"></i> bx bx-border-all
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-border-bottom"></i> bx bx-border-bottom
+                      <i className="bx bx-border-bottom"></i> bx
+                      bx-border-bottom
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-border-top"></i> bx bx-border-top
@@ -255,13 +267,15 @@ const IconBoxicons = () => {
                       <i className="bx bx-brightness"></i> bx bx-brightness
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-brightness-half"></i> bx bx-brightness-half
+                      <i className="bx bx-brightness-half"></i> bx
+                      bx-brightness-half
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-wifi-off"></i> bx bx-wifi-off
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-credit-card-alt"></i> bx bx-credit-card-alt
+                      <i className="bx bx-credit-card-alt"></i> bx
+                      bx-credit-card-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-band-aid"></i> bx bx-band-aid
@@ -279,7 +293,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-receipt"></i> bx bx-receipt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-purchase-tag-alt"></i> bx bx-purchase-tag-alt
+                      <i className="bx bx-purchase-tag-alt"></i> bx
+                      bx-purchase-tag-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-basket"></i> bx bx-basket
@@ -291,7 +306,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-no-entry"></i> bx bx-no-entry
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-message-alt-dots"></i> bx bx-message-alt-dots
+                      <i className="bx bx-message-alt-dots"></i> bx
+                      bx-message-alt-dots
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-message-alt"></i> bx bx-message-alt
@@ -300,19 +316,24 @@ const IconBoxicons = () => {
                       <i className="bx bx-check-square"></i> bx bx-check-square
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-log-out-circle"></i> bx bx-log-out-circle
+                      <i className="bx bx-log-out-circle"></i> bx
+                      bx-log-out-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-log-in-circle"></i> bx bx-log-in-circle
+                      <i className="bx bx-log-in-circle"></i> bx
+                      bx-log-in-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-doughnut-chart"></i> bx bx-doughnut-chart
+                      <i className="bx bx-doughnut-chart"></i> bx
+                      bx-doughnut-chart
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-building-house"></i> bx bx-building-house
+                      <i className="bx bx-building-house"></i> bx
+                      bx-building-house
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-accessibility"></i> bx bx-accessibility
+                      <i className="bx bx-accessibility"></i> bx
+                      bx-accessibility
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-user-voice"></i> bx bx-user-voice
@@ -327,7 +348,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-polygon"></i> bx bx-polygon
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-square-rounded"></i> bx bx-square-rounded
+                      <i className="bx bx-square-rounded"></i> bx
+                      bx-square-rounded
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-square"></i> bx bx-square
@@ -366,19 +388,23 @@ const IconBoxicons = () => {
                       <i className="bx bx-shape-circle"></i> bx bx-shape-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-down-arrow-alt"></i> bx bx-down-arrow-alt
+                      <i className="bx bx-down-arrow-alt"></i> bx
+                      bx-down-arrow-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-up-arrow-alt"></i> bx bx-up-arrow-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-right-arrow-alt"></i> bx bx-right-arrow-alt
+                      <i className="bx bx-right-arrow-alt"></i> bx
+                      bx-right-arrow-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-left-arrow-alt"></i> bx bx-left-arrow-alt
+                      <i className="bx bx-left-arrow-alt"></i> bx
+                      bx-left-arrow-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-lock-open-alt"></i> bx bx-lock-open-alt
+                      <i className="bx bx-lock-open-alt"></i> bx
+                      bx-lock-open-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-lock-alt"></i> bx bx-lock-alt
@@ -426,13 +452,15 @@ const IconBoxicons = () => {
                       <i className="bx bx-ghost"></i> bx bx-ghost
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-shape-triangle"></i> bx bx-shape-triangle
+                      <i className="bx bx-shape-triangle"></i> bx
+                      bx-shape-triangle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-shape-square"></i> bx bx-shape-square
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-video-recording"></i> bx bx-video-recording
+                      <i className="bx bx-video-recording"></i> bx
+                      bx-video-recording
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-notepad"></i> bx bx-notepad
@@ -453,10 +481,12 @@ const IconBoxicons = () => {
                       <i className="bx bx-book-content"></i> bx bx-book-content
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-message-square-dots"></i> bx bx-message-square-dots
+                      <i className="bx bx-message-square-dots"></i> bx
+                      bx-message-square-dots
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-message-square"></i> bx bx-message-square
+                      <i className="bx bx-message-square"></i> bx
+                      bx-message-square
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-slideshow"></i> bx bx-slideshow
@@ -468,13 +498,15 @@ const IconBoxicons = () => {
                       <i className="bx bx-memory-card"></i> bx bx-memory-card
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-message-rounded-dots"></i> bx bx-message-rounded-dots
+                      <i className="bx bx-message-rounded-dots"></i> bx
+                      bx-message-rounded-dots
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-message-dots"></i> bx bx-message-dots
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-bar-chart-alt-2"></i> bx bx-bar-chart-alt-2
+                      <i className="bx bx-bar-chart-alt-2"></i> bx
+                      bx-bar-chart-alt-2
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-store-alt"></i> bx bx-store-alt
@@ -498,7 +530,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-font-family"></i> bx bx-font-family
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-joystick-button"></i> bx bx-joystick-button
+                      <i className="bx bx-joystick-button"></i> bx
+                      bx-joystick-button
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-paint"></i> bx bx-paint
@@ -531,13 +564,15 @@ const IconBoxicons = () => {
                       <i className="bx bx-caret-left"></i> bx bx-caret-left
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-calendar-event"></i> bx bx-calendar-event
+                      <i className="bx bx-calendar-event"></i> bx
+                      bx-calendar-event
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-magnet"></i> bx bx-magnet
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-rewind-circle"></i> bx bx-rewind-circle
+                      <i className="bx bx-rewind-circle"></i> bx
+                      bx-rewind-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-card"></i> bx bx-card
@@ -567,16 +602,20 @@ const IconBoxicons = () => {
                       <i className="bx bx-grid-small"></i> bx bx-grid-small
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-grid-vertical"></i> bx bx-grid-vertical
+                      <i className="bx bx-grid-vertical"></i> bx
+                      bx-grid-vertical
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-grid-horizontal"></i> bx bx-grid-horizontal
+                      <i className="bx bx-grid-horizontal"></i> bx
+                      bx-grid-horizontal
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-move-vertical"></i> bx bx-move-vertical
+                      <i className="bx bx-move-vertical"></i> bx
+                      bx-move-vertical
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-move-horizontal"></i> bx bx-move-horizontal
+                      <i className="bx bx-move-horizontal"></i> bx
+                      bx-move-horizontal
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-stats"></i> bx bx-stats
@@ -594,7 +633,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-search-alt"></i> bx bx-search-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-dollar-circle"></i> bx bx-dollar-circle
+                      <i className="bx bx-dollar-circle"></i> bx
+                      bx-dollar-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-football"></i> bx bx-football
@@ -621,7 +661,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-file-blank"></i> bx bx-file-blank
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-strikethrough"></i> bx bx-strikethrough
+                      <i className="bx bx-strikethrough"></i> bx
+                      bx-strikethrough
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-photo-album"></i> bx bx-photo-album
@@ -654,10 +695,12 @@ const IconBoxicons = () => {
                       <i className="bx bx-box"></i> bx bx-box
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-menu-alt-right"></i> bx bx-menu-alt-right
+                      <i className="bx bx-menu-alt-right"></i> bx
+                      bx-menu-alt-right
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-menu-alt-left"></i> bx bx-menu-alt-left
+                      <i className="bx bx-menu-alt-left"></i> bx
+                      bx-menu-alt-left
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-video-plus"></i> bx bx-video-plus
@@ -708,7 +751,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-rocket"></i> bx bx-rocket
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-certification"></i> bx bx-certification
+                      <i className="bx bx-certification"></i> bx
+                      bx-certification
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-slider-alt"></i> bx bx-slider-alt
@@ -732,7 +776,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-loader-alt"></i> bx bx-loader-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-loader-circle"></i> bx bx-loader-circle
+                      <i className="bx bx-loader-circle"></i> bx
+                      bx-loader-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-wrench"></i> bx bx-wrench
@@ -789,7 +834,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-window-close"></i> bx bx-window-close
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-notification-off"></i> bx bx-notification-off
+                      <i className="bx bx-notification-off"></i> bx
+                      bx-notification-off
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-plug"></i> bx bx-plug
@@ -804,7 +850,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-hourglass"></i> bx bx-hourglass
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-briefcase-alt"></i> bx bx-briefcase-alt
+                      <i className="bx bx-briefcase-alt"></i> bx
+                      bx-briefcase-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-wallet"></i> bx bx-wallet
@@ -837,7 +884,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-images"></i> bx bx-images
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-pie-chart-alt"></i> bx bx-pie-chart-alt
+                      <i className="bx bx-pie-chart-alt"></i> bx
+                      bx-pie-chart-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-news"></i> bx bx-news
@@ -858,10 +906,12 @@ const IconBoxicons = () => {
                       <i className="bx bx-hdd"></i> bx bx-hdd
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-skip-previous-circle"></i> bx bx-skip-previous-circle
+                      <i className="bx bx-skip-previous-circle"></i> bx
+                      bx-skip-previous-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-skip-next-circle"></i> bx bx-skip-next-circle
+                      <i className="bx bx-skip-next-circle"></i> bx
+                      bx-skip-next-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-chip"></i> bx bx-chip
@@ -873,10 +923,12 @@ const IconBoxicons = () => {
                       <i className="bx bx-body"></i> bx bx-body
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-phone-outgoing"></i> bx bx-phone-outgoing
+                      <i className="bx bx-phone-outgoing"></i> bx
+                      bx-phone-outgoing
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-phone-incoming"></i> bx bx-phone-incoming
+                      <i className="bx bx-phone-incoming"></i> bx
+                      bx-phone-incoming
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-collapse"></i> bx bx-collapse
@@ -888,7 +940,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-rotate-right"></i> bx bx-rotate-right
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-horizontal-center"></i> bx bx-horizontal-center
+                      <i className="bx bx-horizontal-center"></i> bx
+                      bx-horizontal-center
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-ruler"></i> bx bx-ruler
@@ -933,7 +986,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-support"></i> bx bx-support
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-subdirectory-right"></i> bx bx-subdirectory-right
+                      <i className="bx bx-subdirectory-right"></i> bx
+                      bx-subdirectory-right
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-right-arrow"></i> bx bx-
@@ -1056,7 +1110,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-share-alt"></i> bx bx-share-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-select-multiple"></i> bx bx-select-multiple
+                      <i className="bx bx-select-multiple"></i> bx
+                      bx-select-multiple
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-screenshot"></i> bx bx-screenshot
@@ -1110,7 +1165,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-minus"></i> bx bx-minus
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-microphone-off"></i> bx bx-microphone-off
+                      <i className="bx bx-microphone-off"></i> bx
+                      bx-microphone-off
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-log-out"></i> bx bx-log-out
@@ -1119,7 +1175,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-log-in"></i> bx bx-log-in
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-link-external"></i> bx bx-link-external
+                      <i className="bx bx-link-external"></i> bx
+                      bx-link-external
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-joystick"></i> bx bx-joystick
@@ -1140,10 +1197,12 @@ const IconBoxicons = () => {
                       <i className="bx bx-group"></i> bx bx-group
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-git-repo-forked"></i> bx bx-git-repo-forked
+                      <i className="bx bx-git-repo-forked"></i> bx
+                      bx-git-repo-forked
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-git-pull-request"></i> bx bx-git-pull-request
+                      <i className="bx bx-git-pull-request"></i> bx
+                      bx-git-pull-request
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-git-merge"></i> bx bx-git-merge
@@ -1200,13 +1259,16 @@ const IconBoxicons = () => {
                       <i className="bx bx-cloud-rain"></i> bx bx-cloud-rain
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-cloud-lightning"></i> bx bx-cloud-lightning
+                      <i className="bx bx-cloud-lightning"></i> bx
+                      bx-cloud-lightning
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-cloud-light-rain"></i> bx bx-cloud-light-rain
+                      <i className="bx bx-cloud-light-rain"></i> bx
+                      bx-cloud-light-rain
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-cloud-drizzle"></i> bx bx-cloud-drizzle
+                      <i className="bx bx-cloud-drizzle"></i> bx
+                      bx-cloud-drizzle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-check"></i> bx bx-check
@@ -1311,7 +1373,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-message"></i> bx bx-message
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-message-rounded"></i> bx bx-message-rounded
+                      <i className="bx bx-message-rounded"></i> bx
+                      bx-message-rounded
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-map"></i> bx bx-map
@@ -1371,16 +1434,20 @@ const IconBoxicons = () => {
                       <i className="bx bx-download"></i> bx bx-download
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-dots-vertical"></i> bx bx-dots-vertical
+                      <i className="bx bx-dots-vertical"></i> bx
+                      bx-dots-vertical
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-dots-vertical-rounded"></i> bx bx-dots-vertical-rounded
+                      <i className="bx bx-dots-vertical-rounded"></i> bx
+                      bx-dots-vertical-rounded
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-dots-horizontal"></i> bx bx-dots-horizontal
+                      <i className="bx bx-dots-horizontal"></i> bx
+                      bx-dots-horizontal
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-dots-horizontal-rounded"></i> bx bx-dots-horizontal-rounded
+                      <i className="bx bx-dots-horizontal-rounded"></i> bx
+                      bx-dots-horizontal-rounded
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-dollar"></i> bx bx-dollar
@@ -1410,7 +1477,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-cloud-upload"></i> bx bx-cloud-upload
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-cloud-download"></i> bx bx-cloud-download
+                      <i className="bx bx-cloud-download"></i> bx
+                      bx-cloud-download
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-chart"></i> bx bx-chart
@@ -1422,13 +1490,16 @@ const IconBoxicons = () => {
                       <i className="bx bx-calendar-x"></i> bx bx-calendar-x
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-calendar-minus"></i> bx bx-calendar-minus
+                      <i className="bx bx-calendar-minus"></i> bx
+                      bx-calendar-minus
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-calendar-check"></i> bx bx-calendar-check
+                      <i className="bx bx-calendar-check"></i> bx
+                      bx-calendar-check
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-calendar-plus"></i> bx bx-calendar-plus
+                      <i className="bx bx-calendar-plus"></i> bx
+                      bx-calendar-plus
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-buoy"></i> bx bx-buoy
@@ -1452,10 +1523,12 @@ const IconBoxicons = () => {
                       <i className="bx bx-briefcase"></i> bx bx-briefcase
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-bookmark-plus"></i> bx bx-bookmark-plus
+                      <i className="bx bx-bookmark-plus"></i> bx
+                      bx-bookmark-plus
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-bookmark-minus"></i> bx bx-bookmark-minus
+                      <i className="bx bx-bookmark-minus"></i> bx
+                      bx-bookmark-minus
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-"></i> bx bx-
@@ -1464,7 +1537,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-book"></i> bx bx-book
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-book-bookmark"></i> bx bx-book-bookmark
+                      <i className="bx bx-book-bookmark"></i> bx
+                      bx-book-bookmark
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-block"></i> bx bx-block
@@ -1476,10 +1550,12 @@ const IconBoxicons = () => {
                       <i className="bx bx-bar-chart"></i> bx bx-bar-chart
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-bar-chart-square"></i> bx bx-bar-chart-square
+                      <i className="bx bx-bar-chart-square"></i> bx
+                      bx-bar-chart-square
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-bar-chart-alt"></i> bx bx-bar-chart-alt
+                      <i className="bx bx-bar-chart-alt"></i> bx
+                      bx-bar-chart-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-at"></i> bx bx-at
@@ -1512,16 +1588,19 @@ const IconBoxicons = () => {
                       <i className="bx bx-video"></i> bx bx-video
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-vertical-center"></i> bx bx-vertical-center
+                      <i className="bx bx-vertical-center"></i> bx
+                      bx-vertical-center
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-up-arrow-circle"></i> bx bx-up-arrow-circle
+                      <i className="bx bx-up-arrow-circle"></i> bx
+                      bx-up-arrow-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-trending-up"></i> bx bx-trending-up
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-trending-down"></i> bx bx-trending-down
+                      <i className="bx bx-trending-down"></i> bx
+                      bx-trending-down
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-toggle-right"></i> bx bx-toggle-right
@@ -1545,7 +1624,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-stop-circle"></i> bx bx-stop-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-skip-previous"></i> bx bx-skip-previous
+                      <i className="bx bx-skip-previous"></i> bx
+                      bx-skip-previous
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-skip-next"></i> bx bx-skip-next
@@ -1560,16 +1640,19 @@ const IconBoxicons = () => {
                       <i className="bx bx-rss"></i> bx bx-rss
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-right-top-arrow-circle"></i> bx bx-right-top-arrow-circle
+                      <i className="bx bx-right-top-arrow-circle"></i> bx
+                      bx-right-top-arrow-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-right-indent"></i> bx bx-right-indent
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-right-down-arrow-circle"></i> bx bx-right-down-arrow-circle
+                      <i className="bx bx-right-down-arrow-circle"></i> bx
+                      bx-right-down-arrow-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-right-arrow-circle"></i> bx bx-right-arrow-circle
+                      <i className="bx bx-right-arrow-circle"></i> bx
+                      bx-right-arrow-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-reset"></i> bx bx-reset
@@ -1584,10 +1667,12 @@ const IconBoxicons = () => {
                       <i className="bx bx-radio-circle"></i> bx bx-radio-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-radio-circle-marked"></i> bx bx-radio-circle-marked
+                      <i className="bx bx-radio-circle-marked"></i> bx
+                      bx-radio-circle-marked
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-question-mark"></i> bx bx-question-mark
+                      <i className="bx bx-question-mark"></i> bx
+                      bx-question-mark
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-plus-circle"></i> bx bx-plus-circle
@@ -1617,16 +1702,19 @@ const IconBoxicons = () => {
                       <i className="bx bx-menu"></i> bx bx-menu
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-left-top-arrow-circle"></i> bx bx-left-top-arrow-circle
+                      <i className="bx bx-left-top-arrow-circle"></i> bx
+                      bx-left-top-arrow-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-left-indent"></i> bx bx-left-indent
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-left-down-arrow-circle"></i> bx bx-left-down-arrow-circle
+                      <i className="bx bx-left-down-arrow-circle"></i> bx
+                      bx-left-down-arrow-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-left-arrow-circle"></i> bx bx-left-arrow-circle
+                      <i className="bx bx-left-arrow-circle"></i> bx
+                      bx-left-arrow-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-last-page"></i> bx bx-last-page
@@ -1635,7 +1723,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-key"></i> bx bx-key
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-align-justify"></i> bx bx-align-justify
+                      <i className="bx bx-align-justify"></i> bx
+                      bx-align-justify
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-info-circle"></i> bx bx-info-circle
@@ -1665,10 +1754,12 @@ const IconBoxicons = () => {
                       <i className="bx bx-fast-forward"></i> bx bx-fast-forward
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-fast-forward-circle"></i> bx bx-fast-forward-circle
+                      <i className="bx bx-fast-forward-circle"></i> bx
+                      bx-fast-forward-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-exit-fullscreen"></i> bx bx-exit-fullscreen
+                      <i className="bx bx-exit-fullscreen"></i> bx
+                      bx-exit-fullscreen
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-error"></i> bx bx-error
@@ -1677,7 +1768,8 @@ const IconBoxicons = () => {
                       <i className="bx bx-error-circle"></i> bx bx-error-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-down-arrow-circle"></i> bx bx-down-arrow-circle
+                      <i className="bx bx-down-arrow-circle"></i> bx
+                      bx-down-arrow-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-copyright"></i> bx bx-copyright
@@ -1698,19 +1790,23 @@ const IconBoxicons = () => {
                       <i className="bx bx-clipboard"></i> bx bx-clipboard
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-chevrons-left"></i> bx bx-chevrons-left
+                      <i className="bx bx-chevrons-left"></i> bx
+                      bx-chevrons-left
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-chevrons-right"></i> bx bx-chevrons-right
+                      <i className="bx bx-chevrons-right"></i> bx
+                      bx-chevrons-right
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-chevrons-up"></i> bx bx-chevrons-up
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-chevrons-down"></i> bx bx-chevrons-down
+                      <i className="bx bx-chevrons-down"></i> bx
+                      bx-chevrons-down
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-chevron-right"></i> bx bx-chevron-right
+                      <i className="bx bx-chevron-right"></i> bx
+                      bx-chevron-right
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-chevron-left"></i> bx bx-chevron-left
@@ -1722,13 +1818,15 @@ const IconBoxicons = () => {
                       <i className="bx bx-chevron-down"></i> bx bx-chevron-down
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-checkbox-square"></i> bx bx-checkbox-square
+                      <i className="bx bx-checkbox-square"></i> bx
+                      bx-checkbox-square
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-checkbox"></i> bx bx-checkbox
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bx-checkbox-checked"></i> bx bx-checkbox-checked
+                      <i className="bx bx-checkbox-checked"></i> bx
+                      bx-checkbox-checked
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bx-captions"></i> bx bx-captions
@@ -1798,7 +1896,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-tired"></i> bx bxs-tired
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-happy-beaming"></i> bx bxs-happy-beaming
+                      <i className="bx bxs-happy-beaming"></i> bx
+                      bxs-happy-beaming
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-shocked"></i> bx bxs-shocked
@@ -1831,7 +1930,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-dizzy"></i> bx bxs-dizzy
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-happy-heart-eyes"></i> bx bxs-happy-heart-eyes
+                      <i className="bx bxs-happy-heart-eyes"></i> bx
+                      bxs-happy-heart-eyes
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-angry"></i> bx bxs-angry
@@ -1864,19 +1964,24 @@ const IconBoxicons = () => {
                       <i className="bx bxs-hand-up"></i> bx bxs-hand-up
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-baby-carriage"></i> bx bxs-baby-carriage
+                      <i className="bx bxs-baby-carriage"></i> bx
+                      bxs-baby-carriage
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-caret-left-circle"></i> bx bxs-caret-left-circle
+                      <i className="bx bxs-caret-left-circle"></i> bx
+                      bxs-caret-left-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-caret-right-circle"></i> bx bxs-caret-right-circle
+                      <i className="bx bxs-caret-right-circle"></i> bx
+                      bxs-caret-right-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-caret-down-circle"></i> bx bxs-caret-down-circle
+                      <i className="bx bxs-caret-down-circle"></i> bx
+                      bxs-caret-down-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-caret-up-circle"></i> bx bxs-caret-up-circle
+                      <i className="bx bxs-caret-up-circle"></i> bx
+                      bxs-caret-up-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-tone"></i> bx bxs-tone
@@ -1912,10 +2017,12 @@ const IconBoxicons = () => {
                       <i className="bx bxs-archive-in"></i> bx bxs-archive-in
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-add-to-queue"></i> bx bxs-add-to-queue
+                      <i className="bx bxs-add-to-queue"></i> bx
+                      bxs-add-to-queue
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-check-shield"></i> bx bxs-check-shield
+                      <i className="bx bxs-check-shield"></i> bx
+                      bxs-check-shield
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-label"></i> bx bxs-label
@@ -1939,19 +2046,24 @@ const IconBoxicons = () => {
                       <i className="bx bxs-layout"></i> bx bxs-layout
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-quote-alt-right"></i> bx bxs-quote-alt-right
+                      <i className="bx bxs-quote-alt-right"></i> bx
+                      bxs-quote-alt-right
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-quote-alt-left"></i> bx bxs-quote-alt-left
+                      <i className="bx bxs-quote-alt-left"></i> bx
+                      bxs-quote-alt-left
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-mobile-vibration"></i> bx bxs-mobile-vibration
+                      <i className="bx bxs-mobile-vibration"></i> bx
+                      bxs-mobile-vibration
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-fast-forward-circle"></i> bx bxs-fast-forward-circle
+                      <i className="bx bxs-fast-forward-circle"></i> bx
+                      bxs-fast-forward-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-rewind-circle"></i> bx bxs-rewind-circle
+                      <i className="bx bxs-rewind-circle"></i> bx
+                      bxs-rewind-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-carousel"></i> bx bxs-carousel
@@ -1960,31 +2072,38 @@ const IconBoxicons = () => {
                       <i className="bx bxs-customize"></i> bx bxs-customize
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-calendar-event"></i> bx bxs-calendar-event
+                      <i className="bx bxs-calendar-event"></i> bx
+                      bxs-calendar-event
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-calendar-check"></i> bx bxs-calendar-check
+                      <i className="bx bxs-calendar-check"></i> bx
+                      bxs-calendar-check
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-calendar-x"></i> bx bxs-calendar-x
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-calendar-minus"></i> bx bxs-calendar-minus
+                      <i className="bx bxs-calendar-minus"></i> bx
+                      bxs-calendar-minus
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-calendar-plus"></i> bx bxs-calendar-plus
+                      <i className="bx bxs-calendar-plus"></i> bx
+                      bxs-calendar-plus
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-calendar-alt"></i> bx bxs-calendar-alt
+                      <i className="bx bxs-calendar-alt"></i> bx
+                      bxs-calendar-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-calendar"></i> bx bxs-calendar
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-briefcase-alt-2"></i> bx bxs-briefcase-alt-2
+                      <i className="bx bxs-briefcase-alt-2"></i> bx
+                      bxs-briefcase-alt-2
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-bookmark-minus"></i> bx bxs-bookmark-minus
+                      <i className="bx bxs-bookmark-minus"></i> bx
+                      bxs-bookmark-minus
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-bookmarks"></i> bx bxs-bookmarks
@@ -1993,7 +2112,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-time-five"></i> bx bxs-time-five
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-pie-chart-alt-2"></i> bx bxs-pie-chart-alt-2
+                      <i className="bx bxs-pie-chart-alt-2"></i> bx
+                      bxs-pie-chart-alt-2
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-time"></i> bx bxs-time
@@ -2032,7 +2152,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-bell-plus"></i> bx bxs-bell-plus
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-folder-minus"></i> bx bxs-folder-minus
+                      <i className="bx bxs-folder-minus"></i> bx
+                      bxs-folder-minus
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-mobile"></i> bx bxs-mobile
@@ -2041,10 +2162,12 @@ const IconBoxicons = () => {
                       <i className="bx bxs-data"></i> bx bxs-data
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-skip-next-circle"></i> bx bxs-skip-next-circle
+                      <i className="bx bxs-skip-next-circle"></i> bx
+                      bxs-skip-next-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-skip-previous-circle"></i> bx bxs-skip-previous-circle
+                      <i className="bx bxs-skip-previous-circle"></i> bx
+                      bxs-skip-previous-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-chalkboard"></i> bx bxs-chalkboard
@@ -2056,16 +2179,20 @@ const IconBoxicons = () => {
                       <i className="bx bxs-institution"></i> bx bxs-institution
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-left-down-arrow-circle"></i> bx bxs-left-down-arrow-circle
+                      <i className="bx bxs-left-down-arrow-circle"></i> bx
+                      bxs-left-down-arrow-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-left-top-arrow-circle"></i> bx bxs-left-top-arrow-circle
+                      <i className="bx bxs-left-top-arrow-circle"></i> bx
+                      bxs-left-top-arrow-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-right-down-arrow-circle"></i> bx bxs-right-down-arrow-circle
+                      <i className="bx bxs-right-down-arrow-circle"></i> bx
+                      bxs-right-down-arrow-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-right-top-arrow-circle"></i> bx bxs-right-top-arrow-circle
+                      <i className="bx bxs-right-top-arrow-circle"></i> bx
+                      bxs-right-top-arrow-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-down-arrow"></i> bx bxs-down-arrow
@@ -2086,7 +2213,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-brightness"></i> bx bxs-brightness
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-brightness-half"></i> bx bxs-brightness-half
+                      <i className="bx bxs-brightness-half"></i> bx
+                      bxs-brightness-half
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-paint"></i> bx bxs-paint
@@ -2095,7 +2223,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-credit-card"></i> bx bxs-credit-card
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-credit-card-alt"></i> bx bxs-credit-card-alt
+                      <i className="bx bxs-credit-card-alt"></i> bx
+                      bxs-credit-card-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-band-aid"></i> bx bxs-band-aid
@@ -2107,7 +2236,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-receipt"></i> bx bxs-receipt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-purchase-tag-alt"></i> bx bxs-purchase-tag-alt
+                      <i className="bx bxs-purchase-tag-alt"></i> bx
+                      bxs-purchase-tag-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-basket"></i> bx bxs-basket
@@ -2122,25 +2252,30 @@ const IconBoxicons = () => {
                       <i className="bx bxs-component"></i> bx bxs-component
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-traffic-barrier"></i> bx bxs-traffic-barrier
+                      <i className="bx bxs-traffic-barrier"></i> bx
+                      bxs-traffic-barrier
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-no-entry"></i> bx bxs-no-entry
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-message-alt-dots"></i> bx bxs-message-alt-dots
+                      <i className="bx bxs-message-alt-dots"></i> bx
+                      bxs-message-alt-dots
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-message-alt"></i> bx bxs-message-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-check-square"></i> bx bxs-check-square
+                      <i className="bx bxs-check-square"></i> bx
+                      bxs-check-square
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-notification-off"></i> bx bxs-notification-off
+                      <i className="bx bxs-notification-off"></i> bx
+                      bxs-notification-off
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-notification"></i> bx bxs-notification
+                      <i className="bx bxs-notification"></i> bx
+                      bxs-notification
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-log-out"></i> bx bxs-log-out
@@ -2149,22 +2284,27 @@ const IconBoxicons = () => {
                       <i className="bx bxs-log-in"></i> bx bxs-log-in
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-log-out-circle"></i> bx bxs-log-out-circle
+                      <i className="bx bxs-log-out-circle"></i> bx
+                      bxs-log-out-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-log-in-circle"></i> bx bxs-log-in-circle
+                      <i className="bx bxs-log-in-circle"></i> bx
+                      bxs-log-in-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-circle"></i> bx bxs-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-doughnut-chart"></i> bx bxs-doughnut-chart
+                      <i className="bx bxs-doughnut-chart"></i> bx
+                      bxs-doughnut-chart
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-building-house"></i> bx bxs-building-house
+                      <i className="bx bxs-building-house"></i> bx
+                      bxs-building-house
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-comment-error"></i> bx bxs-comment-error
+                      <i className="bx bxs-comment-error"></i> bx
+                      bxs-comment-error
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-user-voice"></i> bx bxs-user-voice
@@ -2179,7 +2319,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-polygon"></i> bx bxs-polygon
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-square-rounded"></i> bx bxs-square-rounded
+                      <i className="bx bxs-square-rounded"></i> bx
+                      bxs-square-rounded
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-square"></i> bx bxs-square
@@ -2188,7 +2329,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-error-alt"></i> bx bxs-error-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-shield-alt-2"></i> bx bxs-shield-alt-2
+                      <i className="bx bxs-shield-alt-2"></i> bx
+                      bxs-shield-alt-2
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-paint-roll"></i> bx bxs-paint-roll
@@ -2197,22 +2339,28 @@ const IconBoxicons = () => {
                       <i className="bx bxs-comment-add"></i> bx bxs-comment-add
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-droplet-half"></i> bx bxs-droplet-half
+                      <i className="bx bxs-droplet-half"></i> bx
+                      bxs-droplet-half
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-search-alt-2"></i> bx bxs-search-alt-2
+                      <i className="bx bxs-search-alt-2"></i> bx
+                      bxs-search-alt-2
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-bowling-ball"></i> bx bxs-bowling-ball
+                      <i className="bx bxs-bowling-ball"></i> bx
+                      bxs-bowling-ball
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-hourglass-bottom"></i> bx bxs-hourglass-bottom
+                      <i className="bx bxs-hourglass-bottom"></i> bx
+                      bxs-hourglass-bottom
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-hourglass-top"></i> bx bxs-hourglass-top
+                      <i className="bx bxs-hourglass-top"></i> bx
+                      bxs-hourglass-top
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-lock-open-alt"></i> bx bxs-lock-open-alt
+                      <i className="bx bxs-lock-open-alt"></i> bx
+                      bxs-lock-open-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-lock-alt"></i> bx bxs-lock-alt
@@ -2233,10 +2381,12 @@ const IconBoxicons = () => {
                       <i className="bx bxs-wine"></i> bx bxs-wine
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-comment-detail"></i> bx bxs-comment-detail
+                      <i className="bx bxs-comment-detail"></i> bx
+                      bxs-comment-detail
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-comment-dots"></i> bx bxs-comment-dots
+                      <i className="bx bxs-comment-dots"></i> bx
+                      bxs-comment-dots
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-comment"></i> bx bxs-comment
@@ -2260,7 +2410,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-plane-land"></i> bx bxs-plane-land
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-plane-take-off"></i> bx bxs-plane-take-off
+                      <i className="bx bxs-plane-take-off"></i> bx
+                      bxs-plane-take-off
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-analyse"></i> bx bxs-analyse
@@ -2302,19 +2453,23 @@ const IconBoxicons = () => {
                       <i className="bx bxs-user-pin"></i> bx bxs-user-pin
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-quote-single-right"></i> bx bxs-quote-single-right
+                      <i className="bx bxs-quote-single-right"></i> bx
+                      bxs-quote-single-right
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-quote-single-left"></i> bx bxs-quote-single-left
+                      <i className="bx bxs-quote-single-left"></i> bx
+                      bxs-quote-single-left
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-ghost"></i> bx bxs-ghost
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-direction-left"></i> bx bxs-direction-left
+                      <i className="bx bxs-direction-left"></i> bx
+                      bxs-direction-left
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-video-recording"></i> bx bxs-video-recording
+                      <i className="bx bxs-video-recording"></i> bx
+                      bxs-video-recording
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-notepad"></i> bx bxs-notepad
@@ -2332,13 +2487,16 @@ const IconBoxicons = () => {
                       <i className="bx bxs-chat"></i> bx bxs-chat
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-book-content"></i> bx bxs-book-content
+                      <i className="bx bxs-book-content"></i> bx
+                      bxs-book-content
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-message-square-dots"></i> bx bxs-message-square-dots
+                      <i className="bx bxs-message-square-dots"></i> bx
+                      bxs-message-square-dots
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-message-square"></i> bx bxs-message-square
+                      <i className="bx bxs-message-square"></i> bx
+                      bxs-message-square
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-slideshow"></i> bx bxs-slideshow
@@ -2356,13 +2514,16 @@ const IconBoxicons = () => {
                       <i className="bx bxs-devices"></i> bx bxs-devices
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-message-rounded-dots"></i> bx bxs-message-rounded-dots
+                      <i className="bx bxs-message-rounded-dots"></i> bx
+                      bxs-message-rounded-dots
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-message-dots"></i> bx bxs-message-dots
+                      <i className="bx bxs-message-dots"></i> bx
+                      bxs-message-dots
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-bar-chart-alt-2"></i> bx bxs-bar-chart-alt-2
+                      <i className="bx bxs-bar-chart-alt-2"></i> bx
+                      bxs-bar-chart-alt-2
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-store-alt"></i> bx bxs-store-alt
@@ -2392,13 +2553,15 @@ const IconBoxicons = () => {
                       <i className="bx bxs-plane"></i> bx bxs-plane
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-user-rectangle"></i> bx bxs-user-rectangle
+                      <i className="bx bxs-user-rectangle"></i> bx
+                      bxs-user-rectangle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-eyedropper"></i> bx bxs-eyedroppers
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-cloud-lightning"></i> bx bxs-cloud-lightning
+                      <i className="bx bxs-cloud-lightning"></i> bx
+                      bxs-cloud-lightning
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-cloud-rain"></i> bx bxs-cloud-rain
@@ -2422,10 +2585,12 @@ const IconBoxicons = () => {
                       <i className="bx bxs-flask"></i> bx bxs-flask
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-joystick-button"></i> bx bxs-joystick-button
+                      <i className="bx bxs-joystick-button"></i> bx
+                      bxs-joystick-button
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-direction-right"></i> bx bxs-direction-right
+                      <i className="bx bxs-direction-right"></i> bx
+                      bxs-direction-right
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-directions"></i> bx bxs-directions
@@ -2455,16 +2620,20 @@ const IconBoxicons = () => {
                       <i className="bx bxs-user-badge"></i> bx bxs-user-badge
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-right-arrow-square"></i> bx bxs-right-arrow-square
+                      <i className="bx bxs-right-arrow-square"></i> bx
+                      bxs-right-arrow-square
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-down-arrow-square"></i> bx bxs-down-arrow-square
+                      <i className="bx bxs-down-arrow-square"></i> bx
+                      bxs-down-arrow-square
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-up-arrow-square"></i> bx bxs-up-arrow-square
+                      <i className="bx bxs-up-arrow-square"></i> bx
+                      bxs-up-arrow-square
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-left-arrow-square"></i> bx bxs-left-arrow-square
+                      <i className="bx bxs-left-arrow-square"></i> bx
+                      bxs-left-arrow-square
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-ambulance"></i> bx bxs-ambulance
@@ -2491,7 +2660,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-disc"></i> bx bxs-disc
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-minus-square"></i> bx bxs-minus-square
+                      <i className="bx bxs-minus-square"></i> bx
+                      bxs-minus-square
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-plus-square"></i> bx bxs-plus-square
@@ -2500,7 +2670,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-x-square"></i> bx bxs-x-square
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs- microphone-alt"></i> bx bxs-microphone-alt
+                      <i className="bx bxs- microphone-alt"></i> bx
+                      bxs-microphone-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-image-alt"></i> bx bxs-image-alt
@@ -2509,7 +2680,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-skull"></i> bx bxs-skull
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-dollar-circle"></i> bx bxs-dollar-circle
+                      <i className="bx bxs-dollar-circle"></i> bx
+                      bxs-dollar-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-film"></i> bx bxs-film
@@ -2569,19 +2741,22 @@ const IconBoxicons = () => {
                       <i className="bx bxs-star-half"></i> bx bxs-star-half
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-checkbox-checked"></i> bx bxs-checkbox-checked
+                      <i className="bx bxs-checkbox-checked"></i> bx
+                      bxs-checkbox-checked
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-checkbox"></i> bx bxs-checkbox
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-check-circle"></i> bx bxs-check-circle
+                      <i className="bx bxs-check-circle"></i> bx
+                      bxs-check-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-rocket"></i> bx bxs-rocket
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-certification"></i> bx bxs-certification
+                      <i className="bx bxs-certification"></i> bx
+                      bxs-certification
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-file-plus"></i> bx bxs-file-plus
@@ -2590,7 +2765,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-dashboard"></i> bx bxs-dashboard
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-conversation"></i> bx bxs-conversation
+                      <i className="bx bxs-conversation"></i> bx
+                      bxs-conversation
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-battery-low"></i> bx bxs-battery-low
@@ -2659,7 +2835,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-upvote"></i> bx bxs-upvote
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-up-arrow-circle"></i> bx bxs-up-arrow-circle
+                      <i className="bx bxs-up-arrow-circle"></i> bx
+                      bxs-up-arrow-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-truck"></i> bx bxs-truck
@@ -2677,7 +2854,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-torch"></i> bx bxs-torch
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-toggle-right"></i> bx bxs-toggle-right
+                      <i className="bx bxs-toggle-right"></i> bx
+                      bxs-toggle-right
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-to-top"></i> bx bxs-to-top
@@ -2713,10 +2891,12 @@ const IconBoxicons = () => {
                       <i className="bx bxs-show"></i> bx bxs-show
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-shopping-bag"></i> bx bxs-shopping-bag
+                      <i className="bx bxs-shopping-bag"></i> bx
+                      bxs-shopping-bag
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-shopping-bag-alt"></i> bx bxs-shopping-bag-alt
+                      <i className="bx bxs-shopping-bag-alt"></i> bx
+                      bxs-shopping-bag-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-shield"></i> bx bxs-shield
@@ -2734,7 +2914,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-send"></i> bx bxs-send
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-select-multiple"></i> bx bxs-select-multiple
+                      <i className="bx bxs-select-multiple"></i> bx
+                      bxs-select-multiple
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-sort-alt"></i> bx bxs-sort-alt
@@ -2746,7 +2927,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-ruler"></i> bx bxs-ruler
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-right-arrow-circle"></i> bx bxs-right-arrow-circle
+                      <i className="bx bxs-right-arrow-circle"></i> bx
+                      bxs-right-arrow-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-report"></i> bx bxs-report
@@ -2764,7 +2946,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-quote-left"></i> bx bxs-quote-left
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-purchase-tag"></i> bx bxs-purchase-tag
+                      <i className="bx bxs-purchase-tag"></i> bx
+                      bxs-purchase-tag
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-printer"></i> bx bxs-printer
@@ -2785,16 +2968,19 @@ const IconBoxicons = () => {
                       <i className="bx bxs-pie-chart"></i> bx bxs-pie-chart
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-pie-chart-alt"></i> bx bxs-pie-chart-alt
+                      <i className="bx bxs-pie-chart-alt"></i> bx
+                      bxs-pie-chart-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-phone"></i> bx bxs-phone
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-phone-outgoing"></i> bx bxs-phone-outgoing
+                      <i className="bx bxs-phone-outgoing"></i> bx
+                      bxs-phone-outgoing
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-phone-incoming"></i> bx bxs-phone-incoming
+                      <i className="bx bxs-phone-incoming"></i> bx
+                      bxs-phone-incoming
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-phone-call"></i> bx bxs-phone-call
@@ -2830,19 +3016,22 @@ const IconBoxicons = () => {
                       <i className="bx bxs-moon"></i> bx bxs-moon
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-minus-circle"></i> bx bxs-minus-circle
+                      <i className="bx bxs-minus-circle"></i> bx
+                      bxs-minus-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-microphone"></i> bx bxs-microphone
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-microphone-off"></i> bx bxs-microphone-off
+                      <i className="bx bxs-microphone-off"></i> bx
+                      bxs-microphone-off
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-message"></i> bx bxs-message
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-message-rounded"></i> bx bxs-message-rounded
+                      <i className="bx bxs-message-rounded"></i> bx
+                      bxs-message-rounded
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-map"></i> bx bxs-map
@@ -2860,7 +3049,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-like"></i> bx bxs-like
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-left-arrow-circle"></i> bx bxs-left-arrow-circle
+                      <i className="bx bxs-left-arrow-circle"></i> bx
+                      bxs-left-arrow-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-layer"></i> bx bxs-layer
@@ -2869,7 +3059,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-joystick"></i> bx bxs-joystick
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-joystick-alt"></i> bx bxs-joystick-alt
+                      <i className="bx bxs-joystick-alt"></i> bx
+                      bxs-joystick-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-info-circle"></i> bx bxs-info-circle
@@ -2932,7 +3123,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-error"></i> bx bxs-error
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-error-circle"></i> bx bxs-error-circle
+                      <i className="bx bxs-error-circle"></i> bx
+                      bxs-error-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-envelope"></i> bx bxs-envelope
@@ -2956,7 +3148,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-download"></i> bx bxs-download
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-down-arrow-circle"></i> bx bxs-down-arrow-circle
+                      <i className="bx bxs-down-arrow-circle"></i> bx
+                      bxs-down-arrow-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-dock-top"></i> bx bxs-dock-top
@@ -3007,10 +3200,12 @@ const IconBoxicons = () => {
                       <i className="bx bxs-cloud"></i> bx bxs-cloud
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-cloud-upload"></i> bx bxs-cloud-upload
+                      <i className="bx bxs-cloud-upload"></i> bx
+                      bxs-cloud-upload
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-cloud-download"></i> bx bxs-cloud-download
+                      <i className="bx bxs-cloud-download"></i> bx
+                      bxs-cloud-download
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-chip"></i> bx bxs-chip
@@ -3046,19 +3241,22 @@ const IconBoxicons = () => {
                       <i className="bx bxs-bug"></i> bx bxs-bug
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-briefcase-alt"></i> bx bxs-briefcase-alt
+                      <i className="bx bxs-briefcase-alt"></i> bx
+                      bxs-briefcase-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-briefcase"></i> bx bxs-briefcase
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-bookmark-star"></i> bx bxs-bookmark-star
+                      <i className="bx bxs-bookmark-star"></i> bx
+                      bxs-bookmark-star
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-book-open"></i> bx bxs-book-open
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-bookmark-plus"></i> bx bxs-bookmark-plus
+                      <i className="bx bxs-bookmark-plus"></i> bx
+                      bxs-bookmark-plus
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-bookmark"></i> bx bxs-bookmark
@@ -3076,10 +3274,12 @@ const IconBoxicons = () => {
                       <i className="bx bxs-bell"></i> bx bxs-bell
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-battery-full"></i> bx bxs-battery-full
+                      <i className="bx bxs-battery-full"></i> bx
+                      bxs-battery-full
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-battery-charging"></i> bx bxs-battery-charging
+                      <i className="bx bxs-battery-charging"></i> bx
+                      bxs-battery-charging
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-battery"></i> bx bxs-battery
@@ -3088,7 +3288,8 @@ const IconBoxicons = () => {
                       <i className="bx bxs-barcode"></i> bx bxs-barcode
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxs-bar-chart-square"></i> bx bxs-bar-chart-square
+                      <i className="bx bxs-bar-chart-square"></i> bx
+                      bxs-bar-chart-square
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxs-award"></i> bx bxs-award
@@ -3149,7 +3350,8 @@ const IconBoxicons = () => {
                       <i className="bx bxl-adobe"></i> bx bxl-adobe
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxl-pinterest-alt"></i> bx bxl-pinterest-alt
+                      <i className="bx bxl-pinterest-alt"></i> bx
+                      bxl-pinterest-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxl-imdb"></i> bx bxl-imdb
@@ -3158,16 +3360,20 @@ const IconBoxicons = () => {
                       <i className="bx bxl-jquery"></i> bx bxl-jquery
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxl-facebook-circle"></i> bx bxl-facebook-circle
+                      <i className="bx bxl-facebook-circle"></i> bx
+                      bxl-facebook-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxl-instagram-alt"></i> bx bxl-instagram-alt
+                      <i className="bx bxl-instagram-alt"></i> bx
+                      bxl-instagram-alt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxl-flickr-square"></i> bx bxl-flickr-square
+                      <i className="bx bxl-flickr-square"></i> bx
+                      bxl-flickr-square
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxl-whatsapp-square"></i> bx bxl-whatsapp-square
+                      <i className="bx bxl-whatsapp-square"></i> bx
+                      bxl-whatsapp-square
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxl-squarespace"></i> bx bxl-squarespace
@@ -3239,7 +3445,8 @@ const IconBoxicons = () => {
                       <i className="bx bxl-joomla"></i> bx bxl-joomla
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxl-internet-explorer"></i> bx bxl-internet-explorer
+                      <i className="bx bxl-internet-explorer"></i> bx
+                      bxl-internet-explorer
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxl-paypal"></i> bx bxl-paypal
@@ -3281,13 +3488,15 @@ const IconBoxicons = () => {
                       <i className="bx bxl-firefox"></i> bx bxl-firefox
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxl-stack-overflow"></i> bx bxl-stack-overflow
+                      <i className="bx bxl-stack-overflow"></i> bx
+                      bxl-stack-overflow
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxl-magento"></i> bx bxl-magento
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxl-product-hunt"></i> bx bxl-product-hunt
+                      <i className="bx bxl-product-hunt"></i> bx
+                      bxl-product-hunt
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxl-html5"></i> bx bxl-html5
@@ -3344,10 +3553,12 @@ const IconBoxicons = () => {
                       <i className="bx bxl-deviantart"></i> bx bxl-deviantart
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxl-digitalocean"></i> bx bxl-digitalocean
+                      <i className="bx bxl-digitalocean"></i> bx
+                      bxl-digitalocean
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxl-creative-commons"></i> bx bxl-creative-commons
+                      <i className="bx bxl-creative-commons"></i> bx
+                      bxl-creative-commons
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxl-codepen"></i> bx bxl-codepen
@@ -3401,22 +3612,26 @@ const IconBoxicons = () => {
                       <i className="bx bxl-skype"></i> bx bxl-skype
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxl-medium-square"></i> bx bxl-medium-square
+                      <i className="bx bxl-medium-square"></i> bx
+                      bxl-medium-square
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxl-medium"></i> bx bxl-medium
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxl-linkedin-square"></i> bx bxl-linkedin-square
+                      <i className="bx bxl-linkedin-square"></i> bx
+                      bxl-linkedin-square
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxl-google-plus-circle"></i> bx bxl-google-plus-circle
+                      <i className="bx bxl-google-plus-circle"></i> bx
+                      bxl-google-plus-circle
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxl-google-plus"></i> bx bxl-google-plus
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
-                      <i className="bx bxl-facebook-square"></i> bx bxl-facebook-square
+                      <i className="bx bxl-facebook-square"></i> bx
+                      bxl-facebook-square
                     </Col>
                     <Col xl={3} lg={4} sm={6}>
                       <i className="bx bxl-bitcoin"></i> bx bxl-bitcoin

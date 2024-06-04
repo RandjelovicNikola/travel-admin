@@ -200,6 +200,7 @@ import MainPage from "views/Pages/Flow/MainPage"
 import Room from "views/Pages/Details/Room"
 import RoomTemplate from "views/Pages/Details/RoomTemplate"
 import PriceAdjustmentTable from "views/Pages/Tables/PriceAdjustmentTable"
+import CreateHotel from "views/Pages/Flow/CreateHotel"
 
 const authProtectedRoutes = [
   { path: "/hotel", component: <Hotel /> },
@@ -385,6 +386,7 @@ const authProtectedRoutes = [
     path: "/dashboard",
     component: <Navigate to="/dashboard" />,
   },
+  { path: "/create-hotel", component: <CreateHotel /> },
   { path: "/", exact: true, component: <MainPage /> },
 ]
 

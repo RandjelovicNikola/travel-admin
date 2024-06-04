@@ -8,16 +8,16 @@ const MainPage = () => {
   const [hotels, setHotels] = useState(null)
 
   const api = useHotelApi()
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   const { user } = useContext(UserContext)
 
-  const handleCreateHotel = () => {
-    api.create({ name: "My new hotel", userId: user.id }).then(res => {
-      if (res) {
-        navigate(`/hotel/${res.id}`)
-      }
-    })
-  }
+  // const handleCreateHotel = () => {
+  //   api.create({ name: "My new hotel", userId: user.id }).then(res => {
+  //     if (res) {
+  //       navigate(`/hotel/${res.id}`)
+  //     }
+  //   })
+  // }
 
   const handleNavigateToHotel = id => {
     window.open(`/hotel/${id}`)
@@ -51,15 +51,6 @@ const MainPage = () => {
           >
             Welcome to Start Travel
           </h1>
-
-          <MySeparator gap={15} />
-
-          <button
-            className={"btn btn-primary btn-lg"}
-            onClick={handleCreateHotel}
-          >
-            Create a hotel
-          </button>
 
           <MySeparator gap={25} />
 

@@ -11,6 +11,12 @@ import { ModalContext } from "util/providers/ModalProvider"
 import useHotelApi from "util/api/aHotel"
 import useRoomTemplateApi from "util/api/aRoomTemplate"
 import useRoomApi from "util/api/aRoom"
+import "react-date-range/dist/styles.css"
+import "react-date-range/dist/theme/default.css"
+import { DateRangePicker } from "react-date-range"
+import { addDays, addHours, addYears, format } from "date-fns"
+import usePricingApi from "util/api/aPricing"
+import DateRangePickerComp from "views/Components/PageComponents/Hotel/DateRangePicker/DateRangePickerComp"
 
 const Hotel = () => {
   const [hotel, setHotel] = useState()
@@ -228,6 +234,30 @@ const Hotel = () => {
           </div>
 
           <MySeparator gap={20} />
+
+          <Card style={{ borderRadius: 10 }}>
+            <CardBody>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <text style={{ color: "white" }}>
+                  General reservation configuration
+                </text>
+              </div>
+
+              <MySeparator gap={20} />
+
+              <div>
+                <DateRangePickerComp hotelId={id} months={2} simple selectMax />
+
+                {/* <button onClick={savePricing}>Save</button> */}
+              </div>
+            </CardBody>
+          </Card>
 
           <Card style={{ borderRadius: 10 }}>
             <CardBody>

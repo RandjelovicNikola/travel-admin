@@ -24,6 +24,8 @@ import "./assets/scss/theme.scss"
 import fakeBackend from "./helpers/AuthType/fakeBackend"
 import MyModal from "views/Components/MyModal"
 import { UserProvider } from "util/providers/UserProvider"
+import FlowIndex from "views/Pages/Flow/FlowIndex"
+import { CreateHotelProvider } from "util/providers/CreateHotelProvider"
 
 // Activating fake backend
 fakeBackend()
@@ -91,7 +93,9 @@ const App = () => {
             element={
               <UserProvider>
                 <Authmiddleware>
-                  <Layout>{route.component}</Layout>
+                  <CreateHotelProvider>
+                    <FlowIndex route={route} Layout={Layout} />
+                  </CreateHotelProvider>
                 </Authmiddleware>
               </UserProvider>
             }

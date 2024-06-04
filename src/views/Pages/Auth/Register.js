@@ -21,6 +21,7 @@ import { UserContext } from "util/providers/UserProvider"
 const Register = props => {
   document.title = "Register | Skote - React Admin & Dashboard Template"
 
+  const [phone, setPhone] = useState()
   const [email, setEmail] = useState()
   const [pass, setPass] = useState()
   const [repeatPass, setRepeatPass] = useState()
@@ -32,7 +33,7 @@ const Register = props => {
   const { setUser } = useContext(UserContext)
 
   const handleRegister = () => {
-    api.signUp({ email, password: pass }).then(res => {
+    api.signUp({ phone, email, password: pass }).then(res => {
       if (res) {
         setAxiosToken(res.token)
         setUser(res)
@@ -93,6 +94,19 @@ const Register = props => {
                         return false
                       }}
                     >
+                      <div className="mb-3">
+                        <Label className="form-label">Phone number</Label>
+                        <Input
+                          id="phone"
+                          name="phone"
+                          className="form-control"
+                          placeholder="Enter phone number"
+                          type="phone"
+                          value={phone}
+                          onChange={e => setPhone(e.target.value)}
+                        />
+                      </div>
+
                       <div className="mb-3">
                         <Label className="form-label">Email</Label>
                         <Input

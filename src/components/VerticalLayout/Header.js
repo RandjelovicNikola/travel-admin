@@ -370,6 +370,18 @@ const Header = props => {
               </DropdownMenu>
             </Dropdown> */}
 
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <a className={"btn btn-primary btn-md"} href="/create-hotel">
+                Create a unit
+              </a>
+            </div>
+
             <div className="dropdown d-none d-lg-inline-block ms-1">
               <button
                 type="button"

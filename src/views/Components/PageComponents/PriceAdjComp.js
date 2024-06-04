@@ -84,8 +84,9 @@ const PriceAdjComp = ({ templateId, roomId, adultCount }) => {
           <MySeparator gap={20} />
 
           <div>
-            {Array.from({ length: adultCount - 1 }, (_, i) => i + 1).map(
-              (x, i) => {
+            {Array.from({ length: adultCount - 1 }, (_, i) => i + 1)
+              .reverse()
+              .map((x, i) => {
                 const valueObj = currentAdjustmentValues.find(
                   y => y.adultCount === x
                 )
@@ -94,21 +95,26 @@ const PriceAdjComp = ({ templateId, roomId, adultCount }) => {
                     key={i}
                     style={{
                       height: 50,
-                      width: "70%",
+                      width: "50%",
                       display: "flex",
                       alignItems: "center",
-                      justifyContent: "center",
+                      justifyContent: "start",
                       color: "white",
                     }}
                   >
                     Adults: {x}
+                    <MySeparator gap={20} ver={false} />
                     <input
+                      style={{ width: "50%" }}
+                      className="form-control"
                       type="number"
                       value={valueObj ? valueObj.discountPercentage : ""}
                       onChange={e => handleChangePriceAdj(x, e.target.value)}
                       placeholder={"Unset"}
                     />
+                    <MySeparator gap={20} ver={false} />
                     <button
+                      className="btn btn-primary btn-sm"
                       onClick={() =>
                         handleCreatePriceAdj(
                           x,
@@ -120,7 +126,9 @@ const PriceAdjComp = ({ templateId, roomId, adultCount }) => {
                     >
                       save
                     </button>
+                    <MySeparator ver={false} />
                     <button
+                      className="btn btn-danger btn-sm"
                       onClick={() =>
                         handleRemovePriceAdj(
                           x,
@@ -134,8 +142,7 @@ const PriceAdjComp = ({ templateId, roomId, adultCount }) => {
                     </button>
                   </div>
                 )
-              }
-            )}
+              })}
           </div>
         </CardBody>
       </Card>
